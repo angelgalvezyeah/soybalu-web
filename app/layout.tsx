@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "balu — Tus finanzas personales, por fin claras",
+  title: "balu — App de finanzas personales. Por fin claras. México.",
   description:
     "balu es la app de finanzas personales que te dice exactamente cuánto tienes, cuánto debes y en qué se va tu dinero. Registra, importa con IA, presupuesta y exporta.",
   keywords: "finanzas personales, app finanzas mexico, presupuesto, gastos, ingresos, balu",
