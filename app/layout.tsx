@@ -15,11 +15,20 @@ export const metadata: Metadata = {
     siteName: "balu",
     locale: "es_MX",
     type: "website",
+    images: [
+      {
+        url: "/api/og",
+        width: 1200,
+        height: 630,
+        alt: "balu — Tus finanzas personales, por fin claras",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "balu — Tus finanzas personales, por fin claras",
     description: "La app de finanzas personales hecha para México.",
+    images: ["/api/og"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -41,7 +50,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body style={{ margin: 0, padding: 0, background: "#0A0A0A", color: "#F5F5F0", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <body style={{ margin: 0, padding: 0, background: "#F8FAFC", color: "#0F172A", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
         {children}
       </body>
     </html>
