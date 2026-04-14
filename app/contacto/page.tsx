@@ -1,6 +1,7 @@
 "use client";
 
 import "../globals.css";
+import Image from "next/image";
 
 
 export default function ContactoPage() {
@@ -74,7 +75,9 @@ export default function ContactoPage() {
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, background: "rgba(248,250,252,0.9)", backdropFilter: "blur(20px)", borderBottom: "1px solid #E2E8F0", height: 60, display: "flex", alignItems: "center" }}>
         <div style={{ ...S.container, display: "flex", alignItems: "center", gap: 10, width: "100%", maxWidth: 1100 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
-            <div style={{ width: 28, height: 28, background: "linear-gradient(135deg, #10B981, #059669)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, boxShadow: "0 4px 10px rgba(16,185,129,0.3)" }}>🐻</div>
+            <div style={{ width: 28, height: 28, borderRadius: 8, overflow: "hidden", boxShadow: "0 4px 10px rgba(16,185,129,0.3)", flexShrink: 0 }}>
+              <Image src="/logo.png" alt="balu" width={28} height={28} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+            </div>
             <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, color: "#0F172A", fontSize: 16 }}>balu</span>
           </a>
           <span style={{ color: "#CBD5E1", fontSize: 14 }}>/</span>
@@ -87,7 +90,9 @@ export default function ContactoPage() {
 
           {/* Header */}
           <div style={{ textAlign: "center", marginBottom: 52 }}>
-            <div style={{ width: 72, height: 72, background: "linear-gradient(135deg, #ECFDF5, #D1FAE5)", border: "2px solid #A7F3D0", borderRadius: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 32, margin: "0 auto 20px", boxShadow: "0 8px 24px rgba(16,185,129,0.15)" }}>🐻</div>
+            <div style={{ width: 72, height: 72, borderRadius: 22, overflow: "hidden", margin: "0 auto 20px", boxShadow: "0 8px 24px rgba(16,185,129,0.2)" }}>
+            <Image src="/balu_waving.png" alt="balu" width={72} height={72} style={{ objectFit: "contain", width: "100%", height: "100%" }} />
+          </div>
             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(28px, 5vw, 42px)", fontWeight: 800, letterSpacing: "-1.5px", color: "#0F172A", marginBottom: 12 }}>
               ¿Cómo podemos ayudarte?
             </h1>
