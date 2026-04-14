@@ -841,7 +841,7 @@ function Footer() {
           </div>
           <div>
             <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: "#CBD5E1", letterSpacing: "1px", marginBottom: 12 }}>EMPRESA</p>
-            {["Grupo Bastión", "Lynor (B2B)", "Contacto"].map((l, i) => <FooterLink key={i} href="#">{l}</FooterLink>)}
+            {[{ label: "Grupo Bastión", href: "#" }, { label: "Lynor (B2B)", href: "#" }, { label: "Contacto", href: "/contacto" }].map((l, i) => <FooterLink key={i} href={l.href}>{l.label}</FooterLink>)}
           </div>
           <div>
             <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: "#CBD5E1", letterSpacing: "1px", marginBottom: 12 }}>LEGAL</p>
@@ -885,13 +885,6 @@ export default function Page() {
         <CTAFinal />
       </main>
       <Footer />
-
-      {/* Sticky CTA mobile */}
-      <div className="sticky-cta">
-        <a href="#precios">
-          📱 Descargar balu gratis
-        </a>
-      </div>
     </>
   );
 }
