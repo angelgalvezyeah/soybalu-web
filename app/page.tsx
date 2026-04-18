@@ -832,7 +832,7 @@ function Footer() {
               </div>
               <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: 18, color: "#0F172A" }}>balu</span>
             </div>
-            <p style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.6, maxWidth: 220 }}>App de finanzas personales hecha en México. Grupo Bastión, Saltillo, Coahuila.</p>
+            <p style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.6, maxWidth: 240 }}>App de finanzas personales hecha en México. Operada por Miguel Angel Galvez Urbina, Saltillo, Coahuila.</p>
             <div style={{ marginTop: 12 }}><FooterLink href="https://instagram.com/soybalu.app">Instagram @soybalu.app</FooterLink></div>
           </div>
           <div>
@@ -849,9 +849,11 @@ function Footer() {
             <FooterLink href="/privacidad">Política de Privacidad</FooterLink>
           </div>
         </div>
-        <div style={{ borderTop: "1px solid #F1F5F9", paddingTop: 20, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-          <p style={{ fontSize: 12, color: "#CBD5E1" }}>© 2026 Grupo Bastión. Todos los derechos reservados.</p>
-          <p style={{ fontSize: 12, color: "#CBD5E1" }}>Hecho con 🐻 en Saltillo, México</p>
+        {/* Aviso legal */}
+        <div style={{ borderTop: "1px solid #F1F5F9", paddingTop: 20, marginBottom: 12 }}>
+          <p style={{ fontSize: 12, color: "#64748B", lineHeight: 1.6 }}>
+            Operado por <strong style={{ color: "#475569" }}>Miguel Angel Galvez Urbina</strong>, persona física con actividad empresarial, Saltillo, Coahuila, México. Contacto: <a href="mailto:hola@soybalu.app" style={{ color: "#10B981", textDecoration: "none" }}>hola@soybalu.app</a>
+          </p>
         </div>
       </div>
     </footer>

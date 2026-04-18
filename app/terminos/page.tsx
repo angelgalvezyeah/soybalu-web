@@ -36,7 +36,20 @@ export default function TerminosPage() {
         <div style={{ ...S.container, padding: "40px 24px 80px" }}>
           {/* Intro */}
           <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 16, padding: 24, marginBottom: 32, fontSize: 15, color: "#374151", lineHeight: 1.7, boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
-            Estos Términos y Condiciones regulan el acceso y uso de <strong style={{ color: "#111827" }}>balu</strong>, aplicación de finanzas personales desarrollada por <strong style={{ color: "#111827" }}>Grupo Bastión</strong>, con sede en Saltillo, Coahuila, México. Al descargar, instalar o usar balu, aceptas quedar vinculado por estos términos. Si no estás de acuerdo, no uses la aplicación.
+            Estos Términos y Condiciones regulan el acceso y uso de <strong style={{ color: "#111827" }}>balu</strong>, aplicación de finanzas personales operada por <strong style={{ color: "#111827" }}>Miguel Angel Galvez Urbina</strong> (persona física con actividad empresarial) con ubicación en Saltillo, Coahuila, México. Al descargar, instalar o usar balu, aceptas quedar vinculado por estos términos. Si no estás de acuerdo, no uses la aplicación.
+          </div>
+
+          {/* Responsable del servicio */}
+          <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 16, padding: "20px 24px", marginBottom: 32 }}>
+            <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: "#94A3B8", letterSpacing: "1px", marginBottom: 12, textTransform: "uppercase" }}>
+              Responsable del servicio
+            </p>
+            <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.7, margin: 0 }}>
+              <strong style={{ color: "#0F172A" }}>Responsable:</strong> Miguel Angel Galvez Urbina<br />
+              <strong style={{ color: "#0F172A" }}>Actividad:</strong> Persona física con actividad empresarial bajo régimen de Plataformas Tecnológicas<br />
+              <strong style={{ color: "#0F172A" }}>Ubicación:</strong> Saltillo, Coahuila, México<br />
+              <strong style={{ color: "#0F172A" }}>Contacto:</strong> <a href="mailto:hola@soybalu.app" style={{ color: "#10B981" }}>hola@soybalu.app</a>
+            </p>
           </div>
 
           {/* Secciones */}
@@ -121,7 +134,7 @@ export default function TerminosPage() {
             </Section>
 
             <Section num="7" title="Propiedad intelectual">
-              <p style={p}>Todos los derechos sobre balu — incluyendo código, diseño, nombre, logotipo y mascota — son propiedad exclusiva de <strong>Grupo Bastión</strong>. Se te otorga una licencia limitada, personal y no transferible para usar la app conforme a estos términos.</p>
+              <p style={p}>Todos los derechos sobre balu — incluyendo código, diseño, nombre, logotipo y mascota — son propiedad exclusiva de <strong>Miguel Angel Galvez Urbina</strong>. Se te otorga una licencia limitada, personal y no transferible para usar la app conforme a estos términos.</p>
             </Section>
 
             <Section num="8" title="Limitación de responsabilidad">
@@ -139,7 +152,7 @@ export default function TerminosPage() {
             </Section>
 
             <Section num="10" title="Terminación de cuenta">
-              <p style={p}>Puedes eliminar tu cuenta desde Ajustes en la app. Grupo Bastión puede suspender cuentas que violen estos términos o en caso de actividad fraudulenta. Los datos serán tratados conforme a nuestra Política de Privacidad.</p>
+              <p style={p}>Puedes eliminar tu cuenta desde Ajustes en la app. Miguel Angel Galvez Urbina puede suspender cuentas que violen estos términos o en caso de actividad fraudulenta. Los datos serán tratados conforme a nuestra Política de Privacidad.</p>
             </Section>
 
             <Section num="11" title="Ley aplicable y jurisdicción">
@@ -151,14 +164,14 @@ export default function TerminosPage() {
           {/* Contact box */}
           <div style={{ background: "#ECFDF5", border: "1px solid #A7F3D0", borderRadius: 16, padding: 24, marginTop: 32, textAlign: "center" }}>
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 16, color: "#065F46", marginBottom: 8 }}>¿Tienes preguntas sobre estos términos?</h3>
-            <p style={{ fontSize: 14, color: "#047857", marginBottom: 4 }}>Escríbenos a <a href="mailto:legal@grupobastión.com" style={{ color: "#10B981", fontWeight: 700, textDecoration: "none" }}>legal@grupobastión.com</a></p>
-            <p style={{ fontSize: 14, color: "#047857" }}>Grupo Bastión — Saltillo, Coahuila, México</p>
+            <p style={{ fontSize: 14, color: "#047857", marginBottom: 4 }}>Escríbenos a <a href="mailto:hola@soybalu.app" style={{ color: "#10B981", fontWeight: 700, textDecoration: "none" }}>hola@soybalu.app</a></p>
+            <p style={{ fontSize: 14, color: "#047857" }}>Miguel Angel Galvez Urbina — Saltillo, Coahuila, México</p>
           </div>
         </div>
       </main>
 
       <footer style={{ textAlign: "center", padding: 24, fontSize: 12, color: "#9CA3AF", background: "#fff", borderTop: "1px solid #E2E8F0" }}>
-        © 2026 Grupo Bastión. Todos los derechos reservados. balu es una marca de Grupo Bastión.
+        © 2026 Miguel Angel Galvez Urbina. Todos los derechos reservados. balu es un proyecto operado por Miguel Angel Galvez Urbina (RFC GAUM0212276K3), Saltillo, Coahuila, México.
       </footer>
     </>
   );

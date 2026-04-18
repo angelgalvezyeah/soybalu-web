@@ -36,7 +36,20 @@ export default function PrivacidadPage() {
         <div style={{ ...S.container, padding: "40px 24px 80px" }}>
           {/* Intro */}
           <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 16, padding: 24, marginBottom: 32, fontSize: 15, color: "#374151", lineHeight: 1.7, boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
-            En <strong style={{ color: "#111827" }}>balu</strong>, desarrollada por <strong style={{ color: "#111827" }}>Grupo Bastión</strong> con sede en Saltillo, Coahuila, México, nos tomamos muy en serio la privacidad de tus datos. Esta política explica qué información recopilamos, cómo la usamos y qué derechos tienes sobre ella. Al usar balu, aceptas los términos descritos aquí.
+            En <strong style={{ color: "#111827" }}>balu</strong>, operada por <strong style={{ color: "#111827" }}>Miguel Angel Galvez Urbina</strong> (persona física con actividad empresarial) con ubicación en Saltillo, Coahuila, México, nos tomamos muy en serio la privacidad de tus datos. Esta política explica qué información recopilamos, cómo la usamos y qué derechos tienes sobre ella. Al usar balu, aceptas los términos descritos aquí.
+          </div>
+
+          {/* Responsable del tratamiento */}
+          <div style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 16, padding: "20px 24px", marginBottom: 32 }}>
+            <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: "#94A3B8", letterSpacing: "1px", marginBottom: 12, textTransform: "uppercase" }}>
+              Responsable del tratamiento de datos personales
+            </p>
+            <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.7, margin: 0 }}>
+              <strong style={{ color: "#0F172A" }}>Responsable:</strong> Miguel Angel Galvez Urbina<br />
+              <strong style={{ color: "#0F172A" }}>Actividad:</strong> Persona física con actividad empresarial bajo régimen de Plataformas Tecnológicas<br />
+              <strong style={{ color: "#0F172A" }}>Ubicación:</strong> Saltillo, Coahuila, México<br />
+              <strong style={{ color: "#0F172A" }}>Contacto:</strong> <a href="mailto:hola@soybalu.app" style={{ color: "#10B981" }}>hola@soybalu.app</a>
+            </p>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
@@ -78,7 +91,7 @@ export default function PrivacidadPage() {
                 <li style={li}>Transmisión cifrada mediante <strong>HTTPS/TLS</strong> en todas las comunicaciones entre la app y el servidor.</li>
                 <li style={li}>Autenticación mediante <strong>tokens JWT</strong> con secreto de servidor.</li>
                 <li style={li}>Contraseñas almacenadas con <strong>hash criptográfico seguro</strong>, nunca en texto plano.</li>
-                <li style={li}>Acceso a la base de datos restringido exclusivamente al personal autorizado de Grupo Bastión.</li>
+                <li style={li}>Acceso a la base de datos restringido exclusivamente al responsable del tratamiento.</li>
               </ul>
             </Section>
 
@@ -114,7 +127,7 @@ export default function PrivacidadPage() {
 
             <Section num="8" title="Tus derechos (LFPDPPP)">
               <p style={p}>Conforme a la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</strong>, tienes derecho a Acceso, Rectificación, Cancelación y Oposición (derechos ARCO) sobre tus datos personales.</p>
-              <p style={p}>Para ejercerlos, escríbenos a <strong>privacidad@grupobastión.com</strong> con el asunto "Derechos ARCO". Responderemos en un plazo máximo de 20 días hábiles.</p>
+              <p style={p}>Para ejercerlos, escríbenos a <strong>hola@soybalu.app</strong> con el asunto "Derechos ARCO". Responderemos en un plazo máximo de 20 días hábiles.</p>
               <p style={p}>Adicionalmente, puedes eliminar tu cuenta y todos tus datos directamente desde la app en Ajustes.</p>
             </Section>
 
@@ -131,14 +144,14 @@ export default function PrivacidadPage() {
           {/* Contact box */}
           <div style={{ background: "#ECFDF5", border: "1px solid #A7F3D0", borderRadius: 16, padding: 24, marginTop: 32, textAlign: "center" }}>
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 16, color: "#065F46", marginBottom: 8 }}>¿Tienes preguntas sobre privacidad?</h3>
-            <p style={{ fontSize: 14, color: "#047857", marginBottom: 4 }}>Escríbenos a <a href="mailto:privacidad@grupobastión.com" style={{ color: "#10B981", fontWeight: 700, textDecoration: "none" }}>privacidad@grupobastión.com</a></p>
-            <p style={{ fontSize: 14, color: "#047857" }}>Grupo Bastión — Saltillo, Coahuila, México</p>
+            <p style={{ fontSize: 14, color: "#047857", marginBottom: 4 }}>Escríbenos a <a href="mailto:hola@soybalu.app" style={{ color: "#10B981", fontWeight: 700, textDecoration: "none" }}>hola@soybalu.app</a></p>
+            <p style={{ fontSize: 14, color: "#047857" }}>Miguel Angel Galvez Urbina — Saltillo, Coahuila, México</p>
           </div>
         </div>
       </main>
 
       <footer style={{ textAlign: "center", padding: 24, fontSize: 12, color: "#9CA3AF", background: "#fff", borderTop: "1px solid #E2E8F0" }}>
-        © 2026 Grupo Bastión. Todos los derechos reservados. balu es una marca de Grupo Bastión.
+        © 2026 Miguel Angel Galvez Urbina. Todos los derechos reservados. balu es un proyecto operado por Miguel Angel Galvez Urbina (RFC GAUM0212276K3), Saltillo, Coahuila, México.
       </footer>
     </>
   );
