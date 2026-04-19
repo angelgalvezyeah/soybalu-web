@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad — balu",
-  description: "Política de privacidad de balu, app de finanzas personales desarrollada por Grupo Bastión.",
+  description: "Política de privacidad de balu, app de finanzas personales desarrollada por Miguel Angel Galvez Urbina.",
 };
 
 export default function PrivacidadPage() {
@@ -30,13 +30,13 @@ export default function PrivacidadPage() {
         <div style={{ background: "#10B981", padding: "80px 24px 40px", textAlign: "center" }}>
           <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: "#fff", fontSize: 28, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 6 }}>Política de Privacidad</h1>
           <p style={{ color: "rgba(255,255,255,0.8)", fontSize: 14 }}>balu — App de finanzas personales</p>
-          <span style={{ display: "inline-block", background: "rgba(255,255,255,0.2)", color: "#fff", fontSize: 12, fontWeight: 700, padding: "4px 12px", borderRadius: 20, marginTop: 12 }}>Vigente desde: Enero 2026</span>
+          <span style={{ display: "inline-block", background: "rgba(255,255,255,0.2)", color: "#fff", fontSize: 12, fontWeight: 700, padding: "4px 12px", borderRadius: 20, marginTop: 12 }}>Vigente desde: Abril 2026</span>
         </div>
 
         <div style={{ ...S.container, padding: "40px 24px 80px" }}>
           {/* Intro */}
           <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 16, padding: 24, marginBottom: 32, fontSize: 15, color: "#374151", lineHeight: 1.7, boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
-            En <strong style={{ color: "#111827" }}>balu</strong>, operada por <strong style={{ color: "#111827" }}>Miguel Angel Galvez Urbina</strong> (persona física con actividad empresarial) con ubicación en Saltillo, Coahuila, México, nos tomamos muy en serio la privacidad de tus datos. Esta política explica qué información recopilamos, cómo la usamos y qué derechos tienes sobre ella. Al usar balu, aceptas los términos descritos aquí.
+            En <strong style={{ color: "#111827" }}>balu</strong>, operada por <strong style={{ color: "#111827" }}>Miguel Angel Galvez Urbina</strong> (persona física con actividad empresarial) con ubicación en Saltillo, Coahuila, México, nos tomamos muy en serio la privacidad de tus datos. Esta política explica qué información recopilamos, cómo la usamos, con quién la compartimos y qué derechos tienes sobre ella, en cumplimiento con la <strong style={{ color: "#111827" }}>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong> de México. Al usar balu, aceptas los términos descritos aquí.
           </div>
 
           {/* Responsable del tratamiento */}
@@ -55,14 +55,17 @@ export default function PrivacidadPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
 
             <Section num="1" title="Información que recopilamos">
-              <p style={p}>Para brindarte el servicio de balu, recopilamos únicamente la información que tú introduces directamente:</p>
+              <p style={p}>Para brindarte el servicio de balu, recopilamos la siguiente información:</p>
               <ul style={ul}>
-                <li style={li}><strong>Datos de cuenta:</strong> nombre, dirección de correo electrónico y contraseña (almacenada con cifrado seguro, nunca en texto plano).</li>
+                <li style={li}><strong>Datos de cuenta:</strong> nombre y dirección de correo electrónico. balu no utiliza contraseñas tradicionales; la autenticación se realiza mediante códigos de un solo uso (OTP) enviados a tu correo o WhatsApp.</li>
+                <li style={li}><strong>Número de teléfono (opcional):</strong> si decides vincular un número de WhatsApp, lo recopilamos para enviarte códigos de verificación, recordatorios y mensajes relacionados con el servicio. Puedes eliminar tu número en cualquier momento desde Ajustes.</li>
                 <li style={li}><strong>Datos financieros personales:</strong> cuentas, movimientos (fecha, descripción, nota, monto), presupuestos, gastos recurrentes y saldos iniciales que tú mismo registras. Son de uso exclusivo tuyo.</li>
                 <li style={li}><strong>Entidades:</strong> nombre, descripción y moneda de las entidades financieras que crees (ej. "Finanzas personales", "Negocio").</li>
                 <li style={li}><strong>PDFs bancarios (opcional):</strong> si usas la función de importación, el PDF de tu estado de cuenta es enviado temporalmente a un servicio de inteligencia artificial para extraer los movimientos. El archivo no es almacenado por balu tras el procesamiento.</li>
                 <li style={li}><strong>Resumen financiero mensual (insight):</strong> el dashboard puede mostrar un comentario personalizado generado por inteligencia artificial. Para ello, datos agregados del mes (totales de ingresos, gastos y top 3 categorías de gasto) y tu primer nombre son enviados a la API de Anthropic. No se envían nombres de cuentas ni detalles individuales de movimientos.</li>
+                <li style={li}><strong>Conversaciones con el asistente de IA (Pro/Max):</strong> si tienes un plan que incluye chat con el asistente de inteligencia artificial (por app o por WhatsApp), el contenido de tus mensajes es enviado a la API de Anthropic para generar las respuestas. Puedes revisar qué información compartes en cada mensaje antes de enviarlo.</li>
                 <li style={li}><strong>Archivos compartidos desde otras apps (opcional):</strong> si compartes un PDF bancario desde tu app del banco u otra aplicación directamente a balu, el archivo es recibido y procesado localmente o enviado a la API de importación. balu no accede a tus archivos sin que tú inicies esta acción.</li>
+                <li style={li}><strong>Datos de suscripción:</strong> si contratas un plan de pago, el procesamiento del cobro lo maneja RevenueCat junto con Google Play o App Store. balu recibe únicamente el estado de tu suscripción (plan activo, fecha de renovación), no datos de tu tarjeta.</li>
                 <li style={li}><strong>Progreso de onboarding:</strong> un indicador de qué pasos del tutorial has completado, para personalizar tu experiencia inicial.</li>
                 <li style={li}><strong>Preferencias locales:</strong> tu sesión (token de autenticación) y preferencias de visualización se guardan localmente en tu dispositivo mediante almacenamiento estándar del sistema operativo.</li>
               </ul>
@@ -75,11 +78,13 @@ export default function PrivacidadPage() {
               <p style={p}>Usamos tu información exclusivamente para:</p>
               <ul style={ul}>
                 <li style={li}>Proveer y mantener el funcionamiento de la app balu.</li>
-                <li style={li}>Autenticar tu sesión de forma segura mediante tokens JWT.</li>
+                <li style={li}>Autenticar tu sesión de forma segura mediante códigos de un solo uso (OTP) enviados por correo electrónico o WhatsApp.</li>
                 <li style={li}>Sincronizar tus datos financieros entre tus dispositivos.</li>
                 <li style={li}>Procesar la importación de PDFs bancarios con ayuda de inteligencia artificial.</li>
-                <li style={li}>Enviarte recordatorios locales que tú actives (día 1 de cada mes, gestionados directamente en tu dispositivo sin pasar por nuestros servidores).</li>
-                <li style={li}>Gestionar tu suscripción (balu Lite o balu Pro).</li>
+                <li style={li}>Generar el resumen financiero mensual y, si tienes plan Pro/Max, operar el chat con el asistente de IA.</li>
+                <li style={li}>Enviarte mensajes transaccionales (códigos de verificación, confirmaciones, recordatorios que tú actives) por correo electrónico o WhatsApp.</li>
+                <li style={li}>Gestionar tu suscripción (balu Lite, Pro o Max).</li>
+                <li style={li}>Ocasionalmente, enviarte comunicaciones promocionales sobre balu (ofertas, descuentos o mejoras del servicio) por correo electrónico o WhatsApp. Puedes oponerte a estas comunicaciones en cualquier momento (ver sección 9).</li>
                 <li style={li}>Atender solicitudes de soporte técnico.</li>
               </ul>
               <p style={{ ...p, fontWeight: 700, color: "#111827" }}>No usamos tus datos financieros para publicidad, análisis de crédito, scoring financiero, ni los compartimos con terceros para fines comerciales.</p>
@@ -89,54 +94,85 @@ export default function PrivacidadPage() {
               <p style={p}>Tus datos se almacenan en servidores seguros alojados en <strong>Fly.io</strong> (infraestructura en la nube). Aplicamos las siguientes medidas de seguridad:</p>
               <ul style={ul}>
                 <li style={li}>Transmisión cifrada mediante <strong>HTTPS/TLS</strong> en todas las comunicaciones entre la app y el servidor.</li>
-                <li style={li}>Autenticación mediante <strong>tokens JWT</strong> con secreto de servidor.</li>
-                <li style={li}>Contraseñas almacenadas con <strong>hash criptográfico seguro</strong>, nunca en texto plano.</li>
+                <li style={li}>Autenticación gestionada por <strong>Ory Kratos</strong>, un sistema de identidad de código abierto auto-alojado. Utilizamos <strong>session tokens</strong> con expiración de 30 días y rotación automática.</li>
+                <li style={li}>Verificación mediante códigos de un solo uso (OTP) de 6 dígitos con expiración corta.</li>
                 <li style={li}>Acceso a la base de datos restringido exclusivamente al responsable del tratamiento.</li>
+                <li style={li}>Los datos sensibles (números de teléfono, identificadores) se almacenan con los controles de seguridad estándar de PostgreSQL.</li>
               </ul>
             </Section>
 
-            <Section num="4" title="Servicios de terceros">
-              <p style={p}>balu utiliza los siguientes servicios de terceros en operaciones específicas:</p>
+            <Section num="4" title="Servicios de terceros (encargados del tratamiento)">
+              <p style={p}>balu utiliza los siguientes servicios de terceros, quienes actúan como <strong>encargados del tratamiento</strong> (procesan datos por instrucción nuestra bajo acuerdos de confidencialidad y seguridad). Todos están ubicados principalmente en Estados Unidos:</p>
               <ul style={ul}>
-                <li style={li}><strong>Anthropic (Claude AI) — Importación de PDFs:</strong> cuando usas la función "Importar PDF", tu estado de cuenta bancario es enviado a la API de Anthropic para extraer automáticamente los movimientos. Anthropic recibe el contenido del PDF únicamente para este procesamiento puntual. balu no almacena el PDF tras la importación.</li>
-                <li style={li}><strong>Anthropic (Claude AI) — Insight del dashboard:</strong> para generar el comentario financiero personalizado de tu mes, datos agregados (totales de ingresos, gastos, top 3 categorías y tu primer nombre) son enviados a la API de Anthropic. No se envían movimientos individuales ni datos de identificación adicionales. El uso de Anthropic está sujeto a su propia <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "#10B981" }}>Política de Privacidad</a>.</li>
-                <li style={li}><strong>Fly.io — Infraestructura de servidor:</strong> nuestro backend está alojado en servidores de Fly.io, sujeto a sus acuerdos de confidencialidad y seguridad.</li>
-                <li style={li}><strong>Google Play / App Store — Pagos:</strong> las suscripciones (balu Lite y balu Pro) son procesadas por la tienda donde descargaste la app. Solo reciben la información necesaria para gestionar el cobro.</li>
+                <li style={li}><strong>Meta Platforms, Inc. (WhatsApp Business API):</strong> cuando vinculas un número de WhatsApp, envías o recibes mensajes desde balu, o autenticas tu cuenta por WhatsApp, tu número de teléfono y el contenido de los mensajes transaccionales pasan por la infraestructura de Meta para su entrega. Uso sujeto a la <a href="https://www.whatsapp.com/legal/business-policy" target="_blank" rel="noopener noreferrer" style={{ color: "#10B981" }}>Política de WhatsApp Business</a> y la <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: "#10B981" }}>Política de Privacidad de WhatsApp</a>.</li>
+                <li style={li}><strong>Anthropic, PBC (Claude AI) — Importación de PDFs:</strong> cuando usas la función "Importar PDF", tu estado de cuenta bancario es enviado a la API de Anthropic para extraer automáticamente los movimientos. Anthropic recibe el contenido del PDF únicamente para este procesamiento puntual. balu no almacena el PDF tras la importación.</li>
+                <li style={li}><strong>Anthropic, PBC (Claude AI) — Insight y chat del asistente:</strong> para generar el comentario financiero mensual o las respuestas del asistente (planes Pro/Max), los datos relevantes (totales agregados, tu primer nombre, o el contenido del mensaje que envíes al asistente) son enviados a la API de Anthropic. Uso sujeto a la <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "#10B981" }}>Política de Privacidad de Anthropic</a>.</li>
+                <li style={li}><strong>Fly.io, Inc. — Infraestructura de servidor y base de datos:</strong> nuestro backend, base de datos PostgreSQL y sistema de identidad Kratos están alojados en servidores de Fly.io.</li>
+                <li style={li}><strong>RevenueCat, Inc. — Gestión de suscripciones:</strong> el procesamiento y validación de las compras dentro de la app (balu Lite, Pro y Max) se gestiona mediante RevenueCat, quien recibe los identificadores necesarios para asociar tu compra con tu cuenta. RevenueCat no recibe tus datos financieros personales registrados en balu.</li>
+                <li style={li}><strong>Twilio SendGrid, Inc. — Envío de correos:</strong> los correos electrónicos transaccionales (códigos de verificación, confirmaciones) se envían mediante SendGrid, quien procesa tu dirección de correo para la entrega.</li>
+                <li style={li}><strong>Cloudflare, Inc. — DNS y ruteo de correo:</strong> utilizamos Cloudflare para la gestión del dominio soybalu.app y el ruteo del correo hola@soybalu.app.</li>
+                <li style={li}><strong>Google Play / App Store:</strong> la distribución de la app y el cobro de suscripciones se realizan a través de las tiendas oficiales de Google y Apple, quienes reciben únicamente la información necesaria para procesar el pago.</li>
               </ul>
               <div style={warning}>
-                Si no deseas que tu PDF bancario sea procesado por la API de Anthropic, simplemente no uses la función de importación. Todos los demás registros en balu son manuales y no involucran ningún servicio de IA externo.
+                Si no deseas que tu PDF bancario sea procesado por la API de Anthropic, simplemente no uses la función de importación. Si no deseas recibir mensajes por WhatsApp, no vincules tu número (puedes usar balu únicamente con autenticación por correo).
               </div>
             </Section>
 
-            <Section num="5" title="Exportación de datos y archivos locales">
+            <Section num="5" title="Transferencias internacionales de datos">
+              <p style={p}>Debido a que varios de nuestros encargados (Meta, Anthropic, Fly.io, RevenueCat, SendGrid, Cloudflare, Google, Apple) operan desde los <strong>Estados Unidos de América</strong>, el tratamiento de tus datos implica transferencias internacionales.</p>
+              <p style={p}>Al usar balu, otorgas tu consentimiento para estas transferencias. Todos los encargados mencionados están obligados a proteger tus datos bajo sus propias políticas de privacidad y acuerdos de procesamiento. Solo reciben la información estrictamente necesaria para cumplir con la función que les corresponde.</p>
+              <p style={p}>Puedes revocar este consentimiento en cualquier momento eliminando tu cuenta. Algunas funciones (autenticación por WhatsApp, importación de PDFs, chat con el asistente de IA) dejarán de estar disponibles si limitas las transferencias.</p>
+            </Section>
+
+            <Section num="6" title="Exportación de datos y archivos locales">
               <p style={p}>balu te permite exportar tus datos financieros en formato Excel directamente a tu dispositivo. Este proceso es <strong>completamente local</strong> — el archivo se genera en tu dispositivo y no pasa por nuestros servidores. Puedes compartirlo con las apps que elijas usando las funciones nativas de tu sistema operativo.</p>
               <p style={p}>La función de selección de archivos (al importar un PDF manualmente) accede únicamente al archivo que tú seleccionas explícitamente. balu no tiene acceso al resto de tus archivos.</p>
             </Section>
 
-            <Section num="6" title="Notificaciones">
-              <p style={p}>Las notificaciones de balu son <strong>completamente locales</strong> — se programan directamente en tu dispositivo y no pasan por nuestros servidores. No recopilamos ni almacenamos tokens de notificación push. Puedes activar o desactivar los recordatorios en cualquier momento desde Ajustes dentro de la app.</p>
+            <Section num="7" title="Notificaciones y comunicaciones">
+              <p style={p}>balu puede comunicarse contigo por tres canales:</p>
+              <ul style={ul}>
+                <li style={li}><strong>Notificaciones locales (push):</strong> se programan directamente en tu dispositivo y no pasan por nuestros servidores. No recopilamos ni almacenamos tokens de notificación push. Puedes activar o desactivar los recordatorios en cualquier momento desde Ajustes dentro de la app.</li>
+                <li style={li}><strong>Correo electrónico:</strong> se usa para códigos de verificación, confirmaciones de cuenta y, ocasionalmente, comunicaciones promocionales.</li>
+                <li style={li}><strong>WhatsApp (si vinculaste tu número):</strong> se usa para códigos de verificación, mensajes transaccionales, recordatorios que tú actives, y ocasionalmente comunicaciones promocionales sobre balu.</li>
+              </ul>
+              <p style={p}>Puedes oponerte a recibir comunicaciones promocionales por correo o WhatsApp en cualquier momento (ver sección 9). Los mensajes transaccionales (códigos de verificación, confirmaciones de seguridad) no se pueden desactivar mientras tu cuenta esté activa, ya que son esenciales para el funcionamiento del servicio.</p>
             </Section>
 
-            <Section num="7" title="Retención de datos">
+            <Section num="8" title="Retención de datos">
               <p style={p}>Conservamos tu información mientras tu cuenta esté activa. Si cancelas tu suscripción o eliminas tu cuenta:</p>
               <ul style={ul}>
-                <li style={li}>Tus datos financieros son eliminados de nuestros servidores activos en un plazo de <strong>30 días</strong>.</li>
-                <li style={li}>Los registros de facturación se conservan conforme a los requisitos fiscales mexicanos (hasta 5 años).</li>
+                <li style={li}>Tus datos financieros y personales son eliminados de nuestros servidores activos en un plazo de <strong>30 días</strong>.</li>
+                <li style={li}>Los respaldos cifrados pueden retenerse hasta <strong>90 días adicionales</strong> antes de ser sobrescritos.</li>
+                <li style={li}>Los registros de facturación se conservan conforme a los requisitos fiscales mexicanos (hasta 5 años, según el Código Fiscal de la Federación).</li>
               </ul>
             </Section>
 
-            <Section num="8" title="Tus derechos (LFPDPPP)">
-              <p style={p}>Conforme a la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</strong>, tienes derecho a Acceso, Rectificación, Cancelación y Oposición (derechos ARCO) sobre tus datos personales.</p>
-              <p style={p}>Para ejercerlos, escríbenos a <strong>hola@soybalu.app</strong> con el asunto "Derechos ARCO". Responderemos en un plazo máximo de 20 días hábiles.</p>
-              <p style={p}>Adicionalmente, puedes eliminar tu cuenta y todos tus datos directamente desde la app en Ajustes.</p>
+            <Section num="9" title="Tus derechos (LFPDPPP)">
+              <p style={p}>Conforme a la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</strong>, tienes derecho a:</p>
+              <ul style={ul}>
+                <li style={li}><strong>Acceso:</strong> conocer qué datos tenemos sobre ti.</li>
+                <li style={li}><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+                <li style={li}><strong>Cancelación:</strong> solicitar la eliminación de tus datos.</li>
+                <li style={li}><strong>Oposición:</strong> oponerte al tratamiento de tus datos para fines específicos, incluyendo comunicaciones promocionales.</li>
+                <li style={li}><strong>Revocación del consentimiento:</strong> retirar tu autorización para el tratamiento y las transferencias internacionales en cualquier momento.</li>
+                <li style={li}><strong>Limitación del uso o divulgación:</strong> restringir ciertos usos de tus datos.</li>
+              </ul>
+              <p style={p}>Para ejercer cualquiera de estos derechos, escríbenos a <strong>hola@soybalu.app</strong> con el asunto "Derechos ARCO". Responderemos en un plazo máximo de <strong>20 días hábiles</strong>, conforme lo establece la LFPDPPP.</p>
+              <p style={p}>Adicionalmente, puedes:</p>
+              <ul style={ul}>
+                <li style={li}>Eliminar tu cuenta y todos tus datos directamente desde la app en Ajustes.</li>
+                <li style={li}>Desvincular tu número de WhatsApp en Ajustes.</li>
+                <li style={li}>Darte de baja de comunicaciones promocionales respondiendo "STOP" o "BAJA" a cualquier mensaje promocional de WhatsApp, o haciendo clic en el enlace de cancelación en los correos promocionales.</li>
+              </ul>
             </Section>
 
-            <Section num="9" title="Menores de edad">
+            <Section num="10" title="Menores de edad">
               <p style={p}>balu no está dirigida a menores de 18 años. No recopilamos conscientemente información de menores. Si detectamos que un usuario es menor de edad, procederemos a eliminar su cuenta y datos asociados.</p>
             </Section>
 
-            <Section num="10" title="Cambios a esta política">
-              <p style={p}>Podemos actualizar esta política ocasionalmente. Cuando lo hagamos, notificaremos los cambios relevantes mediante una notificación en la app o por correo electrónico, con al menos 15 días de anticipación para cambios materiales.</p>
+            <Section num="11" title="Cambios a esta política">
+              <p style={p}>Podemos actualizar esta política ocasionalmente. Cuando lo hagamos, notificaremos los cambios relevantes mediante una notificación en la app, por correo electrónico, o por WhatsApp si tienes tu número vinculado, con al menos 15 días de anticipación para cambios materiales. La fecha de última actualización aparece en la parte superior de esta política.</p>
             </Section>
 
           </div>
