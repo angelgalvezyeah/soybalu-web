@@ -49,13 +49,13 @@ function Nav() {
         </a>
 
         <div className="desktop-only" style={{ alignItems: "center", gap: 32 }}>
-          {[{ label: "Cómo funciona", href: "#como-funciona" }, { label: "Características", href: "#caracteristicas" }, { label: "Precios", href: "#precios" }, { label: "IA", href: "#ia" }].map((l, i) => (
+          {[{ label: "Cómo funciona", href: "#como-funciona" }, { label: "Características", href: "#caracteristicas" }, { label: "IA", href: "#ia" }, { label: "Precios", href: "#precios" }].map((l, i) => (
             <NavLink key={i} href={l.href}>{l.label}</NavLink>
           ))}
         </div>
 
         <a href="#precios" className="desktop-only" style={{ alignItems: "center", gap: 8, background: "linear-gradient(135deg, #10B981, #059669)", color: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 14, padding: "10px 22px", borderRadius: 12, textDecoration: "none", boxShadow: "0 4px 16px rgba(16,185,129,0.3)" }}>
-          Empezar gratis
+          Probar 7 días gratis
         </a>
 
         <div className="mobile-only" style={{ alignItems: "center", gap: 10 }}>
@@ -72,7 +72,7 @@ function Nav() {
 
       {menuOpen && (
         <div style={{ background: "#fff", borderTop: "1px solid #F1F5F9", padding: "16px 24px 24px" }}>
-          {[{ label: "Cómo funciona", href: "#como-funciona" }, { label: "Características", href: "#caracteristicas" }, { label: "Precios", href: "#precios" }, { label: "IA", href: "#ia" }].map((l, i) => (
+          {[{ label: "Cómo funciona", href: "#como-funciona" }, { label: "Características", href: "#caracteristicas" }, { label: "IA", href: "#ia" }, { label: "Precios", href: "#precios" }].map((l, i) => (
             <a key={i} href={l.href} onClick={() => setMenuOpen(false)} style={{ display: "block", fontSize: 16, fontWeight: 600, color: "#475569", textDecoration: "none", padding: "12px 0", borderBottom: "1px solid #F1F5F9" }}>{l.label}</a>
           ))}
         </div>
@@ -110,25 +110,21 @@ function Hero() {
               <span style={{ background: "linear-gradient(135deg, #10B981, #059669)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>por fin claras.</span>
             </h1>
             <p style={{ fontSize: "clamp(15px, 2vw, 18px)", color: "#475569", lineHeight: 1.65, marginBottom: 32, animation: "fadeUp 0.7s ease 0.1s both", maxWidth: 440 }}>
-              balu te dice exactamente cuánto tienes, cuánto debes y en qué se va tu dinero. Sin complicaciones.
+              balu te dice exactamente cuánto tienes, cuánto debes y en qué se va tu dinero. Y si quieres, puedes preguntarle lo que sea por WhatsApp.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", animation: "fadeUp 0.7s ease 0.2s both", marginBottom: 36 }}>
               <a href="#precios" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "linear-gradient(135deg, #10B981, #059669)", color: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 15, padding: "14px 28px", borderRadius: 14, textDecoration: "none", boxShadow: "0 8px 24px rgba(16,185,129,0.35)" }}>
-                📱 Descargar ahora
+                📱 Probar 7 días gratis
               </a>
               <a href="#como-funciona" className="hide-mobile" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#F1F5F9", color: "#475569", fontSize: 15, padding: "14px 24px", borderRadius: 14, textDecoration: "none", border: "1px solid #E2E8F0" }}>
                 Ver cómo funciona →
               </a>
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, animation: "fadeUp 0.7s ease 0.3s both" }}>
-              <div style={{ display: "flex" }}>
-                {["🧑","👩","🧔","👱"].map((e, i) => (
-                  <div key={i} style={{ width: 30, height: 30, borderRadius: "50%", background: `hsl(${140 + i * 20}, 60%, ${70 + i * 5}%)`, border: "2px solid #fff", marginLeft: i > 0 ? -8 : 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13 }}>{e}</div>
-                ))}
-              </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 12, maxWidth: 360, animation: "fadeUp 0.7s ease 0.3s both" }}>
+              <div style={{ width: 32, height: 32, background: "#ECFDF5", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>✨</div>
               <div>
-                <div style={{ display: "flex", gap: 1 }}>{"★★★★★".split("").map((s, i) => <span key={i} style={{ color: "#F59E0B", fontSize: 12 }}>{s}</span>)}</div>
-                <p style={{ fontSize: 11, color: "#94A3B8", marginTop: 1 }}>Usuarios en México</p>
+                <p style={{ fontSize: 13, fontWeight: 700, color: "#0F172A", marginBottom: 1 }}>7 días gratis</p>
+                <p style={{ fontSize: 11, color: "#64748B" }}>Cancela cuando quieras · Sin compromisos</p>
               </div>
             </div>
           </div>
@@ -150,16 +146,12 @@ function Hero() {
 function DashboardMock() {
   const spendRatio = 0.82;
   return (
-    // Wrapper con altura fija + overflow hidden + fade inferior
     <div style={{ position: "relative", borderRadius: 28, boxShadow: "0 24px 80px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06)", overflow: "hidden", border: "1px solid rgba(0,0,0,0.05)", width: "100%" }}>
 
-      {/* Contenido real */}
       <div style={{ background: "#D1FAE5" }}>
-        {/* Blob de fondo */}
         <div style={{ position: "absolute", top: "-30%", right: "-15%", width: "65%", height: "140%", background: "#A7F3D0", clipPath: "polygon(50% 0%, 100% 0%, 100% 45%, 85% 58%, 70% 42%, 55% 52%, 53% 42%, 50% 0%)", opacity: 0.5, zIndex: 0 }} />
 
         <div style={{ position: "relative", zIndex: 1, padding: "20px 20px 0" }}>
-          {/* Top row */}
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
             <div style={{ flex: 1, display: "flex", alignItems: "center", gap: 7, background: "rgba(255,255,255,0.4)", border: "1px solid rgba(255,255,255,0.6)", borderRadius: 30, padding: "6px 11px" }}>
               <Image src="/logo.png" alt="balu" width={18} height={18} style={{ borderRadius: "50%", objectFit: "cover" }} />
@@ -171,7 +163,6 @@ function DashboardMock() {
             ))}
           </div>
 
-          {/* Month nav */}
           <div style={{ display: "flex", alignItems: "center", background: "rgba(255,255,255,0.35)", border: "1px solid rgba(255,255,255,0.55)", borderRadius: 13, height: 40, marginBottom: 14, overflow: "hidden" }}>
             <div style={{ width: 36, height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(255,255,255,0.3)" }}>
               <span style={{ fontSize: 16, color: "#064E3B" }}>‹</span>
@@ -182,19 +173,16 @@ function DashboardMock() {
             </div>
           </div>
 
-          {/* Greeting */}
           <div style={{ display: "inline-flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.35)", border: "1px solid rgba(255,255,255,0.5)", borderRadius: 20, padding: "3px 9px", marginBottom: 6 }}>
             <span style={{ fontSize: 10, fontWeight: 700, color: "#047857" }}>↑ Ahorraste este mes</span>
           </div>
           <p style={{ fontSize: 22, fontWeight: 900, color: "#064E3B", letterSpacing: "-0.5px", lineHeight: 1.1, marginBottom: 10 }}>Hola, Ángel 👋</p>
 
-          {/* Big number */}
           <p style={{ fontSize: 11, color: "#6EE7B7", fontWeight: 700, letterSpacing: "1px", marginBottom: 2 }}>AHORRASTE ESTE MES</p>
           <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 48, fontWeight: 900, color: "#064E3B", letterSpacing: "-2px", lineHeight: 1, marginBottom: 16 }}>
             $3,240<span style={{ fontSize: 26, color: "#34D399", fontWeight: 700 }}>.00</span>
           </p>
 
-          {/* Stat cards */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 14 }}>
             {[
               { label: "ENTRÓ", value: "$18,500", dot: "#10B981" },
@@ -211,7 +199,6 @@ function DashboardMock() {
             ))}
           </div>
 
-          {/* Progress bar */}
           <div style={{ marginBottom: 16 }}>
             <div style={{ height: 6, background: "rgba(255,255,255,0.25)", borderRadius: 4, overflow: "hidden", marginBottom: 5 }}>
               <div style={{ height: "100%", width: `${(1 - spendRatio) * 100}%`, background: "#10B981", borderRadius: 4 }} />
@@ -219,7 +206,6 @@ function DashboardMock() {
             <p style={{ fontSize: 10, color: "#047857", fontWeight: 500 }}>Usaste el 82% de lo que ganaste</p>
           </div>
 
-          {/* Balance cards */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 0, paddingBottom: 20 }}>
             {[
               { title: "EN TUS CUENTAS", subtitle: "Efectivo y débito", value: "$16,800", accent: "#0EA5E9" },
@@ -239,7 +225,6 @@ function DashboardMock() {
         </div>
       </div>
 
-      {/* Body — gastos parciales que se cortan con el fade */}
       <div style={{ background: "#fff", padding: "16px 16px 0" }}>
         <p style={{ fontSize: 15, fontWeight: 900, color: "#0F172A", letterSpacing: "-0.3px", marginBottom: 10, textAlign: "center" }}>¿En qué gasté?</p>
         {[
@@ -263,11 +248,9 @@ function DashboardMock() {
             </div>
           </div>
         ))}
-        {/* Padding extra para que el fade tenga contenido que cubrir */}
         <div style={{ height: 40 }} />
       </div>
 
-      {/* Fade hacia blanco en la parte inferior */}
       <div style={{
         position: "absolute", bottom: 0, left: 0, right: 0, height: 120,
         background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 60%, rgba(255,255,255,1) 100%)",
@@ -280,7 +263,7 @@ function DashboardMock() {
 
 // ── Ticker ────────────────────────────────────────────────────────────────
 function Ticker() {
-  const items = ["Dashboard en tiempo real", "Importar PDF con IA", "Presupuestos mensuales", "Gastos recurrentes", "Exportar a Excel", "Saldos iniciales", "Insights de IA", "Finanzas compartidas", "Papelera de datos"];
+  const items = ["Dashboard en tiempo real", "Importar PDF con IA", "Chat con IA por WhatsApp", "Presupuestos mensuales", "Gastos recurrentes", "Exportar a Excel", "Múltiples entidades", "Insights personalizados", "Login sin contraseña"];
   const doubled = [...items, ...items];
   return (
     <div style={{ overflow: "hidden", borderTop: "1px solid #E2E8F0", borderBottom: "1px solid #E2E8F0", padding: "13px 0", background: "#F8FAFC" }}>
@@ -300,9 +283,9 @@ function Ticker() {
 function HowItWorks() {
   const titleRef = useFadeUp();
   const steps = [
-    { num: "01", emoji: "🏦", title: "Configura tus cuentas", desc: "Agrega banco, efectivo, tarjetas y deudas. Balu te guía en menos de 3 minutos.", color: "#0EA5E9", bg: "#EFF6FF" },
+    { num: "01", emoji: "🏦", title: "Configura tus cuentas", desc: "Agrega banco, efectivo, tarjetas y deudas. balu te guía en menos de 3 minutos.", color: "#0EA5E9", bg: "#EFF6FF" },
     { num: "02", emoji: "📝", title: "Registra movimientos", desc: "Anota gastos e ingresos con 3 toques. O importa tu estado de cuenta PDF con IA.", color: "#10B981", bg: "#ECFDF5" },
-    { num: "03", emoji: "💰", title: "Establece saldos", desc: "Dile a balu cuánto tienes hoy en cada cuenta. Reportes 100% precisos desde el día uno.", color: "#F59E0B", bg: "#FFFBEB" },
+    { num: "03", emoji: "💬", title: "Pregúntale lo que sea", desc: "Chatea con el asistente desde la app o WhatsApp. Te responde sobre tus finanzas en segundos.", color: "#F59E0B", bg: "#FFFBEB" },
     { num: "04", emoji: "📊", title: "Entiende tu dinero", desc: "Dashboard, estadísticas, presupuestos y Excel. Datos que se convierten en decisiones.", color: "#8B5CF6", bg: "#F5F3FF" },
   ];
   return (
@@ -343,12 +326,13 @@ function Features() {
   const features = [
     { icon: "📊", title: "Dashboard inteligente", desc: "Ve en tiempo real cuánto ahorras y dónde va tu dinero. Navega entre meses con un toque.", color: "#10B981", bg: "#ECFDF5" },
     { icon: "🤖", title: "Importar PDF con IA", desc: "Sube tu estado de cuenta y Claude extrae todos los movimientos. Tú solo confirmas.", color: "#0EA5E9", bg: "#EFF6FF" },
-    { icon: "🎯", title: "Presupuestos", desc: "Define cuánto quieres gastar por categoría. Balu te avisa cuando estás al límite.", color: "#F59E0B", bg: "#FFFBEB" },
+    { icon: "💬", title: "Asistente por WhatsApp", desc: "Pregúntale a balu desde WhatsApp. Consulta saldos, registra gastos o pide análisis sin abrir la app.", color: "#25D366", bg: "#ECFDF5" },
+    { icon: "🎯", title: "Presupuestos", desc: "Define cuánto quieres gastar por categoría. balu te avisa cuando estás al límite.", color: "#F59E0B", bg: "#FFFBEB" },
     { icon: "🔄", title: "Gastos recurrentes", desc: "Renta, Netflix, gym — configúralos una vez y balu los aplica cada mes.", color: "#8B5CF6", bg: "#F5F3FF" },
     { icon: "📈", title: "Estadísticas avanzadas", desc: "Gráficas de ingresos vs gastos, evolución de activos y comparativa año a año.", color: "#EC4899", bg: "#FDF2F8" },
     { icon: "📥", title: "Exportar a Excel", desc: "Un toque y tienes tus movimientos del mes en Excel, listo para compartir.", color: "#059669", bg: "#ECFDF5" },
-    { icon: "👥", title: "Finanzas compartidas", desc: "Invita a tu pareja o socio. Decidan juntos con los mismos datos en tiempo real.", color: "#F59E0B", bg: "#FFFBEB" },
-    { icon: "🗑️", title: "Papelera de datos", desc: "¿Eliminaste algo por error? Cuentas y movimientos son restaurables en segundos.", color: "#64748B", bg: "#F8FAFC" },
+    { icon: "🏢", title: "Múltiples entidades", desc: "Separa finanzas personales, negocio y proyectos. Hasta 5 entidades con balu Max.", color: "#F59E0B", bg: "#FFFBEB" },
+    { icon: "🔐", title: "Login sin contraseña", desc: "Accede con un código enviado a tu correo o WhatsApp. Sin contraseñas que olvidar.", color: "#64748B", bg: "#F8FAFC" },
   ];
 
   return (
@@ -363,7 +347,6 @@ function Features() {
               <span style={{ background: "linear-gradient(135deg, #10B981, #059669)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Nada que no.</span>
             </h2>
           </div>
-          {/* balu_chart al lado del título en desktop */}
           <div className="desktop-only" style={{ alignItems: "flex-end" }}>
             <Image src="/balu_chart.png" alt="balu con gráfica" width={160} height={160} style={{ objectFit: "contain", filter: "drop-shadow(0 16px 40px rgba(16,185,129,0.3))" }} />
           </div>
@@ -404,67 +387,97 @@ function AISection() {
               <span style={{ background: "linear-gradient(135deg, #0EA5E9, #3B82F6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>tus finanzas.</span>
             </h2>
             <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.7, marginBottom: 24 }}>
-              balu usa la API de Anthropic (Claude) para importar estados de cuenta automáticamente y generarte un resumen financiero personalizado cada mes.
+              balu usa la API de Anthropic (Claude) para importar estados de cuenta, generar insights mensuales y responder tus preguntas financieras — por la app o directamente por WhatsApp.
             </p>
 
-            {/* balu_thinking */}
             <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 24, padding: "16px 20px", background: "linear-gradient(135deg, #EFF6FF, #DBEAFE)", border: "1px solid #BFDBFE", borderRadius: 18 }}>
               <Image src="/balu_thinking.png" alt="balu pensando" width={110} height={110} style={{ objectFit: "contain", flexShrink: 0, filter: "drop-shadow(0 12px 28px rgba(59,130,246,0.3))" }} />
               <div>
-                <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 14, fontWeight: 700, color: "#1D4ED8", marginBottom: 4 }}>Balu analiza por ti</p>
-                <p style={{ fontSize: 13, color: "#3B82F6", lineHeight: 1.5 }}>Sube tu PDF y en segundos tienes todos tus movimientos categorizados y listos para revisar.</p>
+                <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 14, fontWeight: 700, color: "#1D4ED8", marginBottom: 4 }}>Pregúntale lo que sea</p>
+                <p style={{ fontSize: 13, color: "#3B82F6", lineHeight: 1.5 }}>"¿Cuánto gasté en comida este mes?" · "Resúmeme mi marzo" · "¿Puedo ahorrar $500 más?"</p>
               </div>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {[
-                { icon: "📄", title: "Importación de PDF", desc: "Sube tu estado de cuenta y Claude extrae todos los movimientos. Detecta gastos, ingresos y transferencias.", color: "#0EA5E9", bg: "#EFF6FF" },
-                { icon: "💬", title: "Insight mensual", desc: "Al cierre de mes, balu genera un análisis breve y personalizado de tu situación financiera.", color: "#10B981", bg: "#ECFDF5" },
+                { icon: "📄", title: "Importación de PDF", desc: "Sube tu estado de cuenta y Claude extrae todos los movimientos. Detecta gastos, ingresos y transferencias.", color: "#0EA5E9", bg: "#EFF6FF", tag: "Todos los planes" },
+                { icon: "💬", title: "Insight mensual", desc: "Al cierre de mes, balu genera un análisis breve y personalizado de tu situación financiera.", color: "#10B981", bg: "#ECFDF5", tag: "Todos los planes" },
+                { icon: "🤖", title: "Chat con asistente IA", desc: "Habla con balu desde la app o WhatsApp. Consulta, registra gastos o pide análisis sin abrir la app.", color: "#8B5CF6", bg: "#F5F3FF", tag: "Pro y Max" },
               ].map((item, i) => (
                 <div key={i} style={{ display: "flex", gap: 12, padding: "14px 16px", background: item.bg, border: `1px solid ${item.color}20`, borderRadius: 14 }}>
                   <span style={{ fontSize: 20, flexShrink: 0 }}>{item.icon}</span>
-                  <div>
-                    <p style={{ fontSize: 13, fontWeight: 700, color: item.color, marginBottom: 3 }}>{item.title}</p>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 3 }}>
+                      <p style={{ fontSize: 13, fontWeight: 700, color: item.color }}>{item.title}</p>
+                      <span style={{ fontSize: 9, fontWeight: 700, color: item.color, background: "#fff", padding: "2px 6px", borderRadius: 6, border: `1px solid ${item.color}30` }}>{item.tag}</span>
+                    </div>
                     <p style={{ fontSize: 12, color: "#64748B", lineHeight: 1.5 }}>{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <p style={{ fontSize: 12, color: "#94A3B8", marginTop: 14, lineHeight: 1.5 }}>* La importación de PDF es opcional. Si prefieres registrar todo manualmente, balu funciona igual.</p>
+            <p style={{ fontSize: 12, color: "#94A3B8", marginTop: 14, lineHeight: 1.5 }}>* La importación de PDF y el chat con IA son opcionales. Si prefieres registrar todo manualmente, balu funciona igual.</p>
           </div>
 
           {/* Right */}
           <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 20, padding: 20, boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-                <div style={{ width: 38, height: 38, background: "#EFF6FF", borderRadius: 11, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>📄</div>
+            {/* WhatsApp mock */}
+            <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 20, padding: 16, boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, paddingBottom: 12, borderBottom: "1px solid #F1F5F9" }}>
+                <div style={{ width: 36, height: 36, borderRadius: "50%", background: "#25D366", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>💬</div>
                 <div>
-                  <p style={{ fontSize: 13, fontWeight: 700, color: "#0F172A" }}>Estado de cuenta BBVA</p>
-                  <p style={{ fontSize: 11, color: "#94A3B8" }}>Procesado con Claude AI</p>
-                </div>
-                <div style={{ marginLeft: "auto", background: "#ECFDF5", border: "1px solid #A7F3D0", borderRadius: 8, padding: "3px 9px" }}>
-                  <span style={{ fontSize: 11, color: "#059669", fontWeight: 700 }}>✓ Listo</span>
+                  <p style={{ fontSize: 13, fontWeight: 700, color: "#0F172A" }}>balu por WhatsApp</p>
+                  <p style={{ fontSize: 11, color: "#25D366", display: "flex", alignItems: "center", gap: 4 }}>
+                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#25D366", display: "inline-block" }} />
+                    en línea
+                  </p>
                 </div>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                <div style={{ alignSelf: "flex-end", maxWidth: "80%", background: "#DCF8C6", borderRadius: "14px 14px 4px 14px", padding: "8px 12px" }}>
+                  <p style={{ fontSize: 13, color: "#0F172A", lineHeight: 1.4 }}>¿Cuánto llevo gastado en comida este mes?</p>
+                </div>
+                <div style={{ alignSelf: "flex-start", maxWidth: "85%", background: "#F1F5F9", borderRadius: "14px 14px 14px 4px", padding: "10px 12px" }}>
+                  <p style={{ fontSize: 13, color: "#0F172A", lineHeight: 1.5, marginBottom: 6 }}>Llevas <strong>$3,800</strong> en comida en abril 🍽️</p>
+                  <p style={{ fontSize: 12, color: "#475569", lineHeight: 1.5 }}>Es tu categoría #1 del mes (74% del presupuesto). Vas bien: te quedan $1,200 para los últimos 12 días.</p>
+                </div>
+                <div style={{ alignSelf: "flex-end", maxWidth: "80%", background: "#DCF8C6", borderRadius: "14px 14px 4px 14px", padding: "8px 12px" }}>
+                  <p style={{ fontSize: 13, color: "#0F172A", lineHeight: 1.4 }}>Registra que pagué $150 de Uber</p>
+                </div>
+                <div style={{ alignSelf: "flex-start", maxWidth: "85%", background: "#F1F5F9", borderRadius: "14px 14px 14px 4px", padding: "10px 12px" }}>
+                  <p style={{ fontSize: 13, color: "#0F172A", lineHeight: 1.5 }}>Listo ✅ $150 en Transporte desde tu cuenta BBVA.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* PDF import card */}
+            <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 20, padding: 16, boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                <div style={{ width: 34, height: 34, background: "#EFF6FF", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>📄</div>
+                <div style={{ flex: 1 }}>
+                  <p style={{ fontSize: 12, fontWeight: 700, color: "#0F172A" }}>PDF importado con IA</p>
+                  <p style={{ fontSize: 10, color: "#94A3B8" }}>27 movimientos detectados</p>
+                </div>
+                <div style={{ background: "#ECFDF5", border: "1px solid #A7F3D0", borderRadius: 8, padding: "3px 9px" }}>
+                  <span style={{ fontSize: 10, color: "#059669", fontWeight: 700 }}>✓ Listo</span>
+                </div>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
                 {[
                   { desc: "Oxxo • Comida", amount: "-$85.00", color: "#EF4444", bg: "#FEF2F2" },
                   { desc: "SPEI recibido • Sueldo", amount: "+$18,500", color: "#10B981", bg: "#ECFDF5" },
                   { desc: "Spotify • Suscripción", amount: "-$99.00", color: "#EF4444", bg: "#FEF2F2" },
-                  { desc: "Pago TDC BBVA", amount: "-$3,500", color: "#8B5CF6", bg: "#F5F3FF" },
                 ].map((tx, i) => (
-                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 9, padding: "8px 10px", background: tx.bg, borderRadius: 9 }}>
-                    <div style={{ width: 22, height: 22, background: `${tx.color}20`, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                      <div style={{ width: 6, height: 6, borderRadius: "50%", background: tx.color }} />
-                    </div>
-                    <span style={{ fontSize: 12, color: "#475569", flex: 1 }}>{tx.desc}</span>
-                    <span style={{ fontSize: 12, fontWeight: 700, color: tx.color }}>{tx.amount}</span>
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 9px", background: tx.bg, borderRadius: 8 }}>
+                    <div style={{ width: 5, height: 5, borderRadius: "50%", background: tx.color }} />
+                    <span style={{ fontSize: 11, color: "#475569", flex: 1 }}>{tx.desc}</span>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: tx.color }}>{tx.amount}</span>
                   </div>
                 ))}
-                <p style={{ fontSize: 11, color: "#94A3B8", textAlign: "center", marginTop: 2 }}>+ 23 movimientos más detectados</p>
               </div>
             </div>
 
+            {/* Insight card */}
             <div style={{ background: "linear-gradient(135deg, #ECFDF5, #D1FAE5)", border: "1px solid #A7F3D0", borderRadius: 20, padding: "16px 18px", display: "flex", gap: 12, alignItems: "center", boxShadow: "0 4px 20px rgba(16,185,129,0.1)" }}>
               <Image src="/balu_face_happy.png" alt="balu feliz" width={52} height={52} style={{ objectFit: "cover", flexShrink: 0, borderRadius: 14 }} />
               <div>
@@ -491,25 +504,25 @@ function ForWho() {
       tags: ["Ingresos variables", "Facturas", "Flujo de caja"],
     },
     {
-      emoji: "💑",
-      title: "Parejas y familias",
-      desc: "Gastos compartidos, metas en común, sin discusiones de dinero. Con balu Pro ambos ven lo mismo en tiempo real.",
-      color: "#EC4899", bg: "#FDF2F8",
-      tags: ["Cuenta compartida", "Metas conjuntas", "Transparencia"],
-    },
-    {
       emoji: "🎓",
       title: "Jóvenes que empiezan",
       desc: "Primer trabajo, primer departamento, primeras deudas. balu te enseña a llevar finanzas sin saber contabilidad.",
       color: "#0EA5E9", bg: "#EFF6FF",
-      tags: ["Fácil de usar", "Sin experiencia", "Educación financiera"],
+      tags: ["Fácil de usar", "Sin experiencia", "Chat por WhatsApp"],
     },
     {
       emoji: "🏪",
       title: "Pequeños negocios",
-      desc: "Negocio y finanzas personales separados, sin mezclar. Múltiples entidades para mantener todo ordenado.",
+      desc: "Separa finanzas personales del negocio sin mezclar. Con balu Max tienes hasta 5 entidades independientes.",
       color: "#F59E0B", bg: "#FFFBEB",
       tags: ["Múltiples entidades", "Control de gastos", "Reportes"],
+    },
+    {
+      emoji: "🧘",
+      title: "Quienes quieren claridad",
+      desc: "Si alguna vez no supiste cuánto tenías o en qué se fue el mes, balu es para ti. Sin complicaciones, sin Excel.",
+      color: "#EC4899", bg: "#FDF2F8",
+      tags: ["Simple", "Sin jerga", "Tranquilidad"],
     },
   ];
 
@@ -528,124 +541,8 @@ function ForWho() {
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
-          {profiles.map((p, i) => {
-            const cardRef = useFadeUp();
-            return (
-              <div key={i} ref={cardRef} className={`fade-up fade-up-delay-${i + 1}`} style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 20, padding: "24px 22px", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
-                <div style={{ width: 52, height: 52, background: p.bg, border: `1.5px solid ${p.color}20`, borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, marginBottom: 16 }}>
-                  {p.emoji}
-                </div>
-                <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 16, fontWeight: 700, color: "#0F172A", marginBottom: 8, letterSpacing: "-0.2px" }}>{p.title}</h3>
-                <p style={{ fontSize: 13, color: "#64748B", lineHeight: 1.65, marginBottom: 16 }}>{p.desc}</p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                  {p.tags.map((tag, j) => (
-                    <span key={j} style={{ fontSize: 11, fontWeight: 600, color: p.color, background: p.bg, padding: "3px 9px", borderRadius: 100, border: `1px solid ${p.color}20` }}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ── Testimonios ───────────────────────────────────────────────────────────
-function Testimonials() {
-  const titleRef = useFadeUp();
-  const testimonials = [
-    {
-      name: "Rodrigo M.",
-      role: "Freelancer · Diseñador",
-      avatar: "👨‍💻",
-      color: "#8B5CF6",
-      text: "Por fin sé cuánto gané en el mes después de gastos. Antes calculaba en Excel y siempre me equivocaba. Con balu tardo 2 minutos al día.",
-      stars: 5,
-    },
-    {
-      name: "Ana y Carlos",
-      role: "Pareja · Monterrey",
-      avatar: "👫",
-      color: "#EC4899",
-      text: "Dejamos de pelear por dinero. Los dos vemos los mismos números y decidimos juntos. Fue el mejor cambio que hicimos como pareja.",
-      stars: 5,
-    },
-    {
-      name: "Sofía R.",
-      role: "Estudiante · Primer trabajo",
-      avatar: "👩‍🎓",
-      color: "#0EA5E9",
-      text: "Nunca había llevado mis finanzas. Balu me explicó con el tutorial qué era cada cuenta y en 10 minutos ya tenía todo configurado.",
-      stars: 5,
-    },
-    {
-      name: "Miguel T.",
-      role: "Negocio propio · Saltillo",
-      avatar: "🧔",
-      color: "#F59E0B",
-      text: "Tengo mis finanzas personales separadas del negocio. Importo mi estado de cuenta en segundos con la IA. Ya no necesito a nadie que me lleve las cuentas.",
-      stars: 5,
-    },
-  ];
-
-  return (
-    <section className="section-pad" style={{ background: "#fff", overflow: "hidden", position: "relative" }}>
-      <Blob style={{ width: 450, height: 450, bottom: "-100px", left: "-100px", background: "rgba(16,185,129,0.07)", animation: "blobFloat2 18s ease-in-out infinite" }} />
-      <div style={{ ...container, position: "relative", zIndex: 1 }}>
-        <div ref={titleRef} className="fade-up" style={{ textAlign: "center", marginBottom: 52 }}>
-          <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "2px", color: "#10B981", textTransform: "uppercase", marginBottom: 10 }}>Testimonios</p>
-          <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 800, letterSpacing: "-1.5px", color: "#0F172A", lineHeight: 1.1 }}>
-            Lo que dicen<br />
-            <span style={{ background: "linear-gradient(135deg, #10B981, #059669)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>los que ya lo usan.</span>
-          </h2>
-        </div>
-
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-          {testimonials.map((t, i) => {
-            const cardRef = useFadeUp();
-            return (
-              <div key={i} ref={cardRef} className={`fade-up fade-up-delay-${(i % 4) + 1}`} style={{ background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 20, padding: "24px 22px", position: "relative" }}>
-                {/* Comillas decorativas */}
-                <div style={{ position: "absolute", top: 16, right: 20, fontSize: 48, color: `${t.color}15`, fontFamily: "Georgia, serif", lineHeight: 1 }}>"</div>
-
-                {/* Stars */}
-                <div style={{ display: "flex", gap: 2, marginBottom: 14 }}>
-                  {"★★★★★".split("").map((s, j) => (
-                    <span key={j} style={{ color: "#F59E0B", fontSize: 14 }}>{s}</span>
-                  ))}
-                </div>
-
-                {/* Text */}
-                <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.7, marginBottom: 20, fontStyle: "italic" }}>"{t.text}"</p>
-
-                {/* Author */}
-                <div style={{ display: "flex", alignItems: "center", gap: 12, paddingTop: 16, borderTop: "1px solid #F1F5F9" }}>
-                  <div style={{ width: 40, height: 40, borderRadius: "50%", background: `${t.color}15`, border: `2px solid ${t.color}25`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>
-                    {t.avatar}
-                  </div>
-                  <div>
-                    <p style={{ fontSize: 14, fontWeight: 700, color: "#0F172A", marginBottom: 1 }}>{t.name}</p>
-                    <p style={{ fontSize: 12, color: "#94A3B8" }}>{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Social proof bar */}
-        <div style={{ marginTop: 48, background: "linear-gradient(135deg, #ECFDF5, #D1FAE5)", border: "1px solid #A7F3D0", borderRadius: 20, padding: "20px 28px", display: "flex", alignItems: "center", justifyContent: "space-around", flexWrap: "wrap", gap: 24 }}>
-          {[
-            { value: "4.9★", label: "Calificación promedio" },
-            { value: "100%", label: "Recomendarían balu" },
-            { value: "<5min", label: "Para configurar todo" },
-            { value: "0 MXN", label: "Para empezar" },
-          ].map((stat, i) => (
-            <div key={i} style={{ textAlign: "center" }}>
-              <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 26, fontWeight: 900, color: "#064E3B", letterSpacing: "-1px" }}>{stat.value}</p>
-              <p style={{ fontSize: 12, color: "#059669", fontWeight: 500 }}>{stat.label}</p>
-            </div>
+          {profiles.map((p, i) => (
+            <ProfileCard key={i} profile={p} index={i} />
           ))}
         </div>
       </div>
@@ -653,26 +550,68 @@ function Testimonials() {
   );
 }
 
-// ── Pricing (con tabla comparativa) ──────────────────────────────────────
+function ProfileCard({ profile, index }: { profile: { emoji: string; title: string; desc: string; color: string; bg: string; tags: string[] }; index: number }) {
+  const cardRef = useFadeUp();
+  return (
+    <div ref={cardRef} className={`fade-up fade-up-delay-${index + 1}`} style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 20, padding: "24px 22px", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
+      <div style={{ width: 52, height: 52, background: profile.bg, border: `1.5px solid ${profile.color}20`, borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, marginBottom: 16 }}>
+        {profile.emoji}
+      </div>
+      <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 16, fontWeight: 700, color: "#0F172A", marginBottom: 8, letterSpacing: "-0.2px" }}>{profile.title}</h3>
+      <p style={{ fontSize: 13, color: "#64748B", lineHeight: 1.65, marginBottom: 16 }}>{profile.desc}</p>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+        {profile.tags.map((tag, j) => (
+          <span key={j} style={{ fontSize: 11, fontWeight: 600, color: profile.color, background: profile.bg, padding: "3px 9px", borderRadius: 100, border: `1px solid ${profile.color}20` }}>{tag}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── Pricing (3 planes + tabla comparativa) ───────────────────────────────
 function Pricing() {
   const titleRef = useFadeUp();
   const tableRef = useFadeUp();
-  const liteFeatures = ["Dashboard mensual completo", "Registro ilimitado de movimientos", "Importación de PDFs con IA", "Presupuestos y recurrentes", "Exportar a Excel", "Estadísticas básicas", "1 entidad financiera"];
-  const proFeatures = ["Todo lo de Lite", "Múltiples entidades", "Finanzas compartidas con invitados", "Estadísticas avanzadas (año a año)", "Insight de IA mensual personalizado", "Soporte prioritario", "Acceso anticipado a funciones nuevas"];
+
+  const liteFeatures = [
+    "Dashboard mensual completo",
+    "Registro ilimitado de movimientos",
+    "Importación de PDFs con IA",
+    "Presupuestos y recurrentes",
+    "Exportar a Excel",
+    "1 entidad financiera",
+  ];
+  const proFeatures = [
+    "Todo lo de Lite",
+    "Chat con asistente IA (app)",
+    "Chat con asistente IA por WhatsApp",
+    "Insight mensual personalizado",
+    "Estadísticas año a año",
+    "Soporte prioritario",
+  ];
+  const maxFeatures = [
+    "Todo lo de Pro",
+    "Hasta 5 entidades independientes",
+    "Ideal para negocios y familias",
+    "Uso sin límites del asistente IA",
+    "Acceso anticipado a funciones nuevas",
+    "Soporte dedicado",
+  ];
 
   const rows = [
-    { feature: "Dashboard mensual", lite: true, pro: true },
-    { feature: "Movimientos ilimitados", lite: true, pro: true },
-    { feature: "Importar PDF con IA", lite: true, pro: true },
-    { feature: "Presupuestos y recurrentes", lite: true, pro: true },
-    { feature: "Exportar a Excel", lite: true, pro: true },
-    { feature: "Estadísticas básicas", lite: true, pro: true },
-    { feature: "1 entidad financiera", lite: true, pro: false },
-    { feature: "Múltiples entidades", lite: false, pro: true },
-    { feature: "Finanzas compartidas", lite: false, pro: true },
-    { feature: "Estadísticas año a año", lite: false, pro: true },
-    { feature: "Insight de IA mensual", lite: false, pro: true },
-    { feature: "Soporte prioritario", lite: false, pro: true },
+    { feature: "Dashboard mensual", lite: true, pro: true, max: true },
+    { feature: "Movimientos ilimitados", lite: true, pro: true, max: true },
+    { feature: "Importar PDF con IA", lite: true, pro: true, max: true },
+    { feature: "Presupuestos y recurrentes", lite: true, pro: true, max: true },
+    { feature: "Exportar a Excel", lite: true, pro: true, max: true },
+    { feature: "Estadísticas básicas", lite: true, pro: true, max: true },
+    { feature: "Insight mensual con IA", lite: false, pro: true, max: true },
+    { feature: "Chat con asistente (app)", lite: false, pro: true, max: true },
+    { feature: "Chat con asistente (WhatsApp)", lite: false, pro: true, max: true },
+    { feature: "Estadísticas año a año", lite: false, pro: true, max: true },
+    { feature: "Soporte prioritario", lite: false, pro: true, max: true },
+    { feature: "Entidades financieras", lite: "1", pro: "1", max: "5" },
+    { feature: "Acceso anticipado a features", lite: false, pro: false, max: true },
   ];
 
   return (
@@ -682,17 +621,46 @@ function Pricing() {
         <div ref={titleRef} className="fade-up" style={{ textAlign: "center", marginBottom: 44 }}>
           <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "2px", color: "#10B981", textTransform: "uppercase", marginBottom: 10 }}>Precios</p>
           <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 800, letterSpacing: "-1.5px", color: "#0F172A", lineHeight: 1.1, marginBottom: 10 }}>Elige tu plan.</h2>
-          <p style={{ fontSize: 15, color: "#64748B" }}>Cancela cuando quieras. Sin compromisos.</p>
+          <p style={{ fontSize: 15, color: "#64748B" }}>7 días gratis · Cancela cuando quieras · Sin compromisos</p>
         </div>
 
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
           <Image src="/balu_money.png" alt="balu con dinero" width={160} height={160} style={{ objectFit: "contain", filter: "drop-shadow(0 16px 40px rgba(16,185,129,0.3))", animation: "float 4s ease-in-out infinite" }} />
         </div>
 
-        {/* Plan cards */}
-        <div className="grid-pricing" style={{ marginBottom: 48 }}>
-          <PlanCard name="BALU LITE" price="$69" period="/mes" annual="o $499/año — ahorra $329" features={liteFeatures} featured={false} cta="Empezar con Lite" />
-          <PlanCard name="BALU PRO" price="$129" period="/mes" annual="o $999/año — ahorra $549" features={proFeatures} featured={true} cta="Empezar con Pro" badge="POPULAR" />
+        {/* 3 Plan cards */}
+        <div className="grid-pricing-3" style={{ marginBottom: 48 }}>
+          <PlanCard
+            name="BALU LITE"
+            price="$69"
+            period="/mes"
+            annual="o $690/año · equivale a 10 meses"
+            description="Para empezar a ordenar tus finanzas."
+            features={liteFeatures}
+            featured={false}
+            cta="Empezar con Lite"
+          />
+          <PlanCard
+            name="BALU PRO"
+            price="$129"
+            period="/mes"
+            annual="o $1,290/año · equivale a 10 meses"
+            description="Con asistente IA por app y WhatsApp."
+            features={proFeatures}
+            featured={true}
+            cta="Empezar con Pro"
+            badge="MÁS POPULAR"
+          />
+          <PlanCard
+            name="BALU MAX"
+            price="$199"
+            period="/mes"
+            annual="o $1,990/año · equivale a 10 meses"
+            description="Hasta 5 entidades. Para negocios y familias."
+            features={maxFeatures}
+            featured={false}
+            cta="Empezar con Max"
+          />
         </div>
 
         {/* Comparison table */}
@@ -705,17 +673,25 @@ function Pricing() {
             <table className="pricing-table">
               <thead>
                 <tr>
-                  <th style={{ width: "50%" }}>Característica</th>
+                  <th style={{ width: "40%" }}>Característica</th>
                   <th>Lite</th>
                   <th style={{ color: "#059669", background: "#F0FDF4" }}>Pro ⭐</th>
+                  <th>Max</th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row, i) => (
                   <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "#FAFAFA" }}>
                     <td>{row.feature}</td>
-                    <td style={{ color: row.lite ? "#10B981" : "#CBD5E1" }}>{row.lite ? "✓" : "—"}</td>
-                    <td style={{ color: row.pro ? "#10B981" : "#CBD5E1", background: i % 2 === 0 ? "#F0FDF4" : "#ECFDF5" }}>{row.pro ? "✓" : "—"}</td>
+                    <td style={{ color: typeof row.lite === "string" ? "#0F172A" : row.lite ? "#10B981" : "#CBD5E1", fontWeight: typeof row.lite === "string" ? 700 : 400 }}>
+                      {typeof row.lite === "string" ? row.lite : row.lite ? "✓" : "—"}
+                    </td>
+                    <td style={{ color: typeof row.pro === "string" ? "#0F172A" : row.pro ? "#10B981" : "#CBD5E1", background: i % 2 === 0 ? "#F0FDF4" : "#ECFDF5", fontWeight: typeof row.pro === "string" ? 700 : 400 }}>
+                      {typeof row.pro === "string" ? row.pro : row.pro ? "✓" : "—"}
+                    </td>
+                    <td style={{ color: typeof row.max === "string" ? "#0F172A" : row.max ? "#10B981" : "#CBD5E1", fontWeight: typeof row.max === "string" ? 700 : 400 }}>
+                      {typeof row.max === "string" ? row.max : row.max ? "✓" : "—"}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -723,26 +699,27 @@ function Pricing() {
           </div>
         </div>
 
-        <p style={{ textAlign: "center", fontSize: 12, color: "#94A3B8", marginTop: 24 }}>Precios en MXN · App Store y Google Play · Cancela cuando quieras</p>
+        <p style={{ textAlign: "center", fontSize: 12, color: "#94A3B8", marginTop: 24 }}>Precios en MXN · App Store y Google Play · Plan anual equivale a 10 meses de 12</p>
       </div>
     </section>
   );
 }
 
-function PlanCard({ name, price, period, annual, features, featured, cta, badge }: { name: string; price: string; period: string; annual: string; features: string[]; featured: boolean; cta: string; badge?: string }) {
+function PlanCard({ name, price, period, annual, description, features, featured, cta, badge }: { name: string; price: string; period: string; annual: string; description: string; features: string[]; featured: boolean; cta: string; badge?: string }) {
   const [hover, setHover] = useState(false);
   return (
-    <div style={{ background: featured ? "linear-gradient(160deg, #ECFDF5 0%, #fff 60%)" : "#fff", border: `1.5px solid ${featured ? "#A7F3D0" : "#E2E8F0"}`, borderRadius: 22, padding: "26px 22px", position: "relative", overflow: "hidden", boxShadow: featured ? "0 16px 56px rgba(16,185,129,0.15)" : hover ? "0 8px 32px rgba(0,0,0,0.08)" : "0 2px 8px rgba(0,0,0,0.04)", transform: hover ? "translateY(-4px)" : "none", transition: "all 0.25s ease" }}
+    <div style={{ background: featured ? "linear-gradient(160deg, #ECFDF5 0%, #fff 60%)" : "#fff", border: `1.5px solid ${featured ? "#A7F3D0" : "#E2E8F0"}`, borderRadius: 22, padding: "26px 22px", position: "relative", overflow: "hidden", boxShadow: featured ? "0 16px 56px rgba(16,185,129,0.15)" : hover ? "0 8px 32px rgba(0,0,0,0.08)" : "0 2px 8px rgba(0,0,0,0.04)", transform: hover ? "translateY(-4px)" : "none", transition: "all 0.25s ease", display: "flex", flexDirection: "column" }}
       onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       {featured && <Blob style={{ width: 180, height: 180, top: -60, right: -60, background: "rgba(16,185,129,0.1)" }} />}
-      {badge && <div style={{ position: "absolute", top: 16, right: 16, background: "linear-gradient(135deg, #10B981, #059669)", color: "#fff", fontSize: 10, fontWeight: 800, fontFamily: "'Plus Jakarta Sans', sans-serif", padding: "4px 10px", borderRadius: 100 }}>{badge}</div>}
-      <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: featured ? "#059669" : "#94A3B8", letterSpacing: "1px", marginBottom: 6 }}>{name}</p>
-      <div style={{ marginBottom: 6 }}>
+      {badge && <div style={{ position: "absolute", top: 16, right: 16, background: "linear-gradient(135deg, #10B981, #059669)", color: "#fff", fontSize: 10, fontWeight: 800, fontFamily: "'Plus Jakarta Sans', sans-serif", padding: "4px 10px", borderRadius: 100, zIndex: 1 }}>{badge}</div>}
+      <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: featured ? "#059669" : "#94A3B8", letterSpacing: "1px", marginBottom: 6, position: "relative", zIndex: 1 }}>{name}</p>
+      <p style={{ fontSize: 13, color: "#64748B", marginBottom: 14, lineHeight: 1.45, position: "relative", zIndex: 1 }}>{description}</p>
+      <div style={{ marginBottom: 6, position: "relative", zIndex: 1 }}>
         <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 38, fontWeight: 800, color: "#0F172A", letterSpacing: "-1.5px" }}>{price}</span>
         <span style={{ fontSize: 13, color: "#94A3B8" }}>{period}</span>
       </div>
-      <p style={{ fontSize: 13, color: "#10B981", fontWeight: 600, marginBottom: 22 }}>{annual}</p>
-      <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 22 }}>
+      <p style={{ fontSize: 12, color: "#10B981", fontWeight: 600, marginBottom: 22, position: "relative", zIndex: 1 }}>{annual}</p>
+      <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 22, position: "relative", zIndex: 1, flex: 1 }}>
         {features.map((f, i) => (
           <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 9 }}>
             <div style={{ width: 17, height: 17, borderRadius: "50%", background: "#ECFDF5", border: "1.5px solid #A7F3D0", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>
@@ -752,7 +729,7 @@ function PlanCard({ name, price, period, annual, features, featured, cta, badge 
           </div>
         ))}
       </div>
-      <a href="#" style={{ display: "block", textAlign: "center", padding: "13px", background: featured ? "linear-gradient(135deg, #10B981, #059669)" : "#F1F5F9", color: featured ? "#fff" : "#475569", borderRadius: 13, fontSize: 14, fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, textDecoration: "none", boxShadow: featured ? "0 6px 20px rgba(16,185,129,0.3)" : "none" }}>{cta}</a>
+      <a href="#" style={{ display: "block", textAlign: "center", padding: "13px", background: featured ? "linear-gradient(135deg, #10B981, #059669)" : "#F1F5F9", color: featured ? "#fff" : "#475569", borderRadius: 13, fontSize: 14, fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, textDecoration: "none", boxShadow: featured ? "0 6px 20px rgba(16,185,129,0.3)" : "none", position: "relative", zIndex: 1 }}>{cta}</a>
     </div>
   );
 }
@@ -760,12 +737,14 @@ function PlanCard({ name, price, period, annual, features, featured, cta, badge 
 // ── FAQ ───────────────────────────────────────────────────────────────────
 function FAQ() {
   const faqs = [
+    { q: "¿Cómo funciona el período de prueba?", a: "Todos los planes incluyen 7 días gratis. Durante ese tiempo puedes usar todas las funciones del plan sin cargo. Si no cancelas antes de que termine, se cobra automáticamente el primer período." },
     { q: "¿Es seguro subir mi estado de cuenta?", a: "Sí. Tu PDF se envía directamente a la API de Anthropic (Claude) solo para extraer los movimientos. balu no lo almacena después del procesamiento. Toda la comunicación es cifrada con HTTPS." },
+    { q: "¿Cómo funciona el chat con IA por WhatsApp?", a: "Si tienes plan Pro o Max, puedes vincular tu número y hablar con balu directamente por WhatsApp. Puedes preguntar por tus gastos, pedir análisis o registrar movimientos desde el chat. Todo con el mismo contexto que dentro de la app." },
     { q: "¿Necesito conectar mis cuentas bancarias?", a: "No. balu funciona con registro manual y con importación de PDFs. No pedimos acceso a tus cuentas bancarias ni contraseñas. Tú tienes el control total." },
-    { q: "¿Puedo usar balu para mi negocio?", a: "balu Pro te permite crear múltiples entidades e invitar colaboradores, ideal para freelancers y pequeños negocios. Para negocios más complejos, pronto llegará Lynor (nuestro producto B2B)." },
-    { q: "¿Qué pasa si cancelo mi suscripción?", a: "Mantienes acceso hasta el fin del período pagado. Después tu cuenta pasa a modo lectura. Tus datos se eliminan a los 30 días si no reactivas." },
+    { q: "¿Puedo usar balu para mi negocio?", a: "Sí. Con balu Max puedes crear hasta 5 entidades financieras separadas, ideal para separar finanzas personales de negocio o manejar varios proyectos al mismo tiempo." },
+    { q: "¿Qué pasa si cancelo mi suscripción?", a: "Mantienes acceso hasta el fin del período pagado. Después tus datos permanecen disponibles por 30 días antes de ser eliminados. Puedes exportar todo a Excel en cualquier momento." },
     { q: "¿Funciona en iOS y Android?", a: "Sí. balu está disponible en App Store y Google Play. La experiencia es idéntica en ambas plataformas." },
-    { q: "¿Tiene soporte para moneda extranjera?", a: "Cada entidad puede configurarse con su propia moneda (MXN, USD, EUR, etc.). Por ahora sin conversión de divisas automática." },
+    { q: "¿Cómo inicio sesión sin contraseña?", a: "balu envía un código de 6 dígitos a tu correo (o WhatsApp, si lo vinculas). Ingresas el código y listo. Sin contraseñas que olvidar ni que te roben." },
   ];
 
   return (
@@ -810,8 +789,8 @@ function CTAFinal() {
           <span style={{ background: "linear-gradient(135deg, #10B981, #059669)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>cuánto tienes hoy?</span>
         </h2>
         <p style={{ fontSize: 17, color: "#64748B", maxWidth: 380, margin: "0 auto 32px", lineHeight: 1.6 }}>Con balu, la respuesta siempre es sí.</p>
-        <a href="#" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "linear-gradient(135deg, #10B981, #059669)", color: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 16, padding: "15px 34px", borderRadius: 15, textDecoration: "none", boxShadow: "0 12px 36px rgba(16,185,129,0.35)" }}>
-          📱 Descargar balu gratis
+        <a href="#precios" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "linear-gradient(135deg, #10B981, #059669)", color: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 16, padding: "15px 34px", borderRadius: 15, textDecoration: "none", boxShadow: "0 12px 36px rgba(16,185,129,0.35)" }}>
+          📱 Empezar gratis por 7 días
         </a>
         <p style={{ fontSize: 12, color: "#94A3B8", marginTop: 12 }}>App Store y Google Play · Disponible para México</p>
       </div>
@@ -837,11 +816,15 @@ function Footer() {
           </div>
           <div>
             <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: "#CBD5E1", letterSpacing: "1px", marginBottom: 12 }}>PRODUCTO</p>
-            {["Características", "Precios", "Cómo funciona", "IA"].map((l, i) => <FooterLink key={i} href="#">{l}</FooterLink>)}
+            <FooterLink href="#como-funciona">Cómo funciona</FooterLink>
+            <FooterLink href="#caracteristicas">Características</FooterLink>
+            <FooterLink href="#ia">IA y WhatsApp</FooterLink>
+            <FooterLink href="#precios">Precios</FooterLink>
           </div>
           <div>
-            <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: "#CBD5E1", letterSpacing: "1px", marginBottom: 12 }}>EMPRESA</p>
-            {[{ label: "Grupo Bastión", href: "#" }, { label: "Lynor (B2B)", href: "#" }, { label: "Contacto", href: "/contacto" }].map((l, i) => <FooterLink key={i} href={l.href}>{l.label}</FooterLink>)}
+            <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: "#CBD5E1", letterSpacing: "1px", marginBottom: 12 }}>SOPORTE</p>
+            <FooterLink href="mailto:hola@soybalu.app">Contacto</FooterLink>
+            <FooterLink href="mailto:hola@soybalu.app">Reportar un problema</FooterLink>
           </div>
           <div>
             <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: "#CBD5E1", letterSpacing: "1px", marginBottom: 12 }}>LEGAL</p>
@@ -849,10 +832,9 @@ function Footer() {
             <FooterLink href="/privacidad">Política de Privacidad</FooterLink>
           </div>
         </div>
-        {/* Aviso legal */}
         <div style={{ borderTop: "1px solid #F1F5F9", paddingTop: 20, marginBottom: 12 }}>
           <p style={{ fontSize: 12, color: "#64748B", lineHeight: 1.6 }}>
-            Operado por <strong style={{ color: "#475569" }}>Miguel Angel Galvez Urbina</strong>, persona física con actividad empresarial, Saltillo, Coahuila, México. Contacto: <a href="mailto:hola@soybalu.app" style={{ color: "#10B981", textDecoration: "none" }}>hola@soybalu.app</a>
+            © 2026 Operado por <strong style={{ color: "#475569" }}>Miguel Angel Galvez Urbina</strong>, persona física con actividad empresarial (RFC GAUM0212276K3), Saltillo, Coahuila, México. Contacto: <a href="mailto:hola@soybalu.app" style={{ color: "#10B981", textDecoration: "none" }}>hola@soybalu.app</a>
           </p>
         </div>
       </div>
@@ -880,7 +862,6 @@ export default function Page() {
         <HowItWorks />
         <ForWho />
         <Features />
-        <Testimonials />
         <AISection />
         <Pricing />
         <FAQ />
