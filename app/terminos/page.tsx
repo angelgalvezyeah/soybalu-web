@@ -56,7 +56,7 @@ export default function TerminosPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
 
             <Section num="1" title="Descripción del servicio">
-              <p style={p}>balu es una aplicación de gestión de finanzas personales que te permite registrar cuentas, movimientos, presupuestos y gastos recurrentes de forma manual, importar estados de cuenta bancarios en PDF con ayuda de inteligencia artificial, e interactuar con un asistente de IA para consultas financieras (en los planes que lo incluyen).</p>
+              <p style={p}>balu es una aplicación de gestión de finanzas personales que te permite registrar cuentas, movimientos, presupuestos y gastos recurrentes de forma manual, importar estados de cuenta bancarios en PDF con ayuda de inteligencia artificial, e interactuar con un asistente de IA por WhatsApp para consultas financieras (en los planes que lo incluyen).</p>
               <p style={p}>balu opera bajo modelo de suscripción con tres planes:</p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12, margin: "16px 0" }}>
                 <div style={{ border: "1px solid #E2E8F0", borderRadius: 12, padding: 16 }}>
@@ -76,9 +76,6 @@ export default function TerminosPage() {
                 </div>
               </div>
               <p style={p}>Todos los precios están expresados en <strong>pesos mexicanos (MXN)</strong>. El plan anual equivale a pagar solo <strong>10 meses de 12</strong>. Las características específicas de cada plan (número de entidades, límites de uso del asistente, mensajería por WhatsApp, etc.) están descritas en la app y pueden actualizarse conforme evolucione el producto.</p>
-              <div style={highlight}>
-                balu ofrece un <strong>período de prueba gratuito de 7 días</strong> en cualquier plan de pago. Durante este período podrás usar todas las funciones del plan seleccionado sin cargo. Si no cancelas antes de que termine el período de prueba, se cobrará automáticamente el primer período del plan elegido.
-              </div>
             </Section>
 
             <Section num="2" title="Registro y cuenta">
@@ -110,7 +107,6 @@ export default function TerminosPage() {
               <p style={p}>Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta en Google Play o App Store:</p>
               <ul style={ul}>
                 <li style={li}>Mantendrás acceso al plan pagado hasta el fin del período contratado (mensual o anual).</li>
-                <li style={li}>Si cancelas durante el período de prueba de 7 días, no se realizará ningún cargo.</li>
                 <li style={li}>Los reembolsos están sujetos a las políticas de la tienda donde realizaste la compra (<a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener noreferrer" style={{ color: "#10B981" }}>Google Play</a> o <a href="https://support.apple.com/es-mx/HT204084" target="_blank" rel="noopener noreferrer" style={{ color: "#10B981" }}>App Store</a>), además de los derechos que te correspondan bajo la <strong>Ley Federal de Protección al Consumidor</strong> de México.</li>
                 <li style={li}>No se realizan reembolsos proporcionales por períodos no utilizados, salvo que la ley lo exija o lo autorice la tienda correspondiente.</li>
               </ul>
@@ -123,9 +119,8 @@ export default function TerminosPage() {
               <p style={p}>balu utiliza la <strong>API de Anthropic (Claude)</strong> en las siguientes funciones:</p>
               <ul style={ul}>
                 <li style={li}><strong>Importación de PDFs (todos los planes):</strong> el contenido de tu estado de cuenta bancario es enviado a Anthropic para extraer los movimientos automáticamente. balu no almacena el PDF tras el procesamiento. La precisión puede variar según el formato del documento — te recomendamos revisar los movimientos antes de confirmarlos.</li>
-                <li style={li}><strong>Insight del dashboard (todos los planes):</strong> el resumen financiero mensual personalizado se genera enviando datos agregados de tu mes (totales de ingresos, gastos, top 3 categorías de gasto y tu primer nombre) a la API de Anthropic. No se envían movimientos individuales ni información de identificación adicional.</li>
-                <li style={li}><strong>Asistente de IA por app (planes Pro y Max):</strong> puedes conversar con un asistente inteligente desde la app para hacer preguntas sobre tus finanzas, obtener análisis y recomendaciones. El contenido de tus mensajes es enviado a la API de Anthropic para generar las respuestas.</li>
-                <li style={li}><strong>Asistente de IA por WhatsApp (planes Pro y Max):</strong> si vinculas tu número de WhatsApp, puedes conversar con el asistente directamente desde WhatsApp. El contenido de tus mensajes pasa por la infraestructura de Meta (WhatsApp) y se envía a la API de Anthropic.</li>
+                <li style={li}><strong>Insight mensual del dashboard (planes Pro y Max):</strong> el resumen financiero mensual personalizado se genera enviando datos agregados de tu mes (totales de ingresos, gastos, top 3 categorías de gasto y tu primer nombre) a la API de Anthropic. No se envían movimientos individuales ni información de identificación adicional.</li>
+                <li style={li}><strong>Asistente de IA por WhatsApp (planes Pro y Max):</strong> el chat con el asistente de balu es <strong>exclusivo por WhatsApp</strong> — dentro de la app no existe chatbot. Si vinculas tu número, puedes hacer consultas, registrar movimientos y pedir análisis desde WhatsApp. El contenido de tus mensajes pasa por la infraestructura de Meta (WhatsApp) y se envía a la API de Anthropic para generar las respuestas.</li>
               </ul>
               <p style={p}>Al usar estas funciones aceptas que tus datos sean procesados por Anthropic conforme a su propia <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "#10B981" }}>política de privacidad</a>. El asistente de IA puede cometer errores o presentar información imprecisa — sus respuestas no constituyen asesoría financiera profesional.</p>
               <p style={p}>Si no deseas usar las funciones de IA, puedes registrar todos tus movimientos manualmente y simplemente no utilizar el asistente ni la importación de PDFs.</p>

@@ -55,7 +55,7 @@ function Nav() {
         </div>
 
         <a href="#precios" className="desktop-only" style={{ alignItems: "center", gap: 8, background: "linear-gradient(135deg, #10B981, #059669)", color: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 14, padding: "10px 22px", borderRadius: 12, textDecoration: "none", boxShadow: "0 4px 16px rgba(16,185,129,0.3)" }}>
-          Probar 7 días gratis
+          Descargar
         </a>
 
         <div className="mobile-only" style={{ alignItems: "center", gap: 10 }}>
@@ -114,17 +114,17 @@ function Hero() {
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", animation: "fadeUp 0.7s ease 0.2s both", marginBottom: 36 }}>
               <a href="#precios" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "linear-gradient(135deg, #10B981, #059669)", color: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 15, padding: "14px 28px", borderRadius: 14, textDecoration: "none", boxShadow: "0 8px 24px rgba(16,185,129,0.35)" }}>
-                📱 Probar 7 días gratis
+                📱 Descargar balu
               </a>
               <a href="#como-funciona" className="hide-mobile" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#F1F5F9", color: "#475569", fontSize: 15, padding: "14px 24px", borderRadius: 14, textDecoration: "none", border: "1px solid #E2E8F0" }}>
                 Ver cómo funciona →
               </a>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 12, maxWidth: 360, animation: "fadeUp 0.7s ease 0.3s both" }}>
-              <div style={{ width: 32, height: 32, background: "#ECFDF5", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>✨</div>
+              <div style={{ width: 32, height: 32, background: "#ECFDF5", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>🎁</div>
               <div>
-                <p style={{ fontSize: 13, fontWeight: 700, color: "#0F172A", marginBottom: 1 }}>7 días gratis</p>
-                <p style={{ fontSize: 11, color: "#64748B" }}>Cancela cuando quieras · Sin compromisos</p>
+                <p style={{ fontSize: 13, fontWeight: 700, color: "#0F172A", marginBottom: 1 }}>Descarga gratis</p>
+                <p style={{ fontSize: 11, color: "#64748B" }}>Empieza a registrar desde el día uno</p>
               </div>
             </div>
           </div>
@@ -285,7 +285,7 @@ function HowItWorks() {
   const steps = [
     { num: "01", emoji: "🏦", title: "Configura tus cuentas", desc: "Agrega banco, efectivo, tarjetas y deudas. balu te guía en menos de 3 minutos.", color: "#0EA5E9", bg: "#EFF6FF" },
     { num: "02", emoji: "📝", title: "Registra movimientos", desc: "Anota gastos e ingresos con 3 toques. O importa tu estado de cuenta PDF con IA.", color: "#10B981", bg: "#ECFDF5" },
-    { num: "03", emoji: "💬", title: "Pregúntale lo que sea", desc: "Chatea con el asistente desde la app o WhatsApp. Te responde sobre tus finanzas en segundos.", color: "#F59E0B", bg: "#FFFBEB" },
+    { num: "03", emoji: "💬", title: "Pregúntale por WhatsApp", desc: "Chatea con balu desde WhatsApp. Consulta saldos, registra gastos o pide análisis sin abrir la app.", color: "#F59E0B", bg: "#FFFBEB" },
     { num: "04", emoji: "📊", title: "Entiende tu dinero", desc: "Dashboard, estadísticas, presupuestos y Excel. Datos que se convierten en decisiones.", color: "#8B5CF6", bg: "#F5F3FF" },
   ];
   return (
@@ -326,7 +326,7 @@ function Features() {
   const features = [
     { icon: "📊", title: "Dashboard inteligente", desc: "Ve en tiempo real cuánto ahorras y dónde va tu dinero. Navega entre meses con un toque.", color: "#10B981", bg: "#ECFDF5" },
     { icon: "🤖", title: "Importar PDF con IA", desc: "Sube tu estado de cuenta y Claude extrae todos los movimientos. Tú solo confirmas.", color: "#0EA5E9", bg: "#EFF6FF" },
-    { icon: "💬", title: "Asistente por WhatsApp", desc: "Pregúntale a balu desde WhatsApp. Consulta saldos, registra gastos o pide análisis sin abrir la app.", color: "#25D366", bg: "#ECFDF5" },
+    { icon: "💬", title: "Asistente por WhatsApp", desc: "El chat con balu vive en WhatsApp. Consulta saldos, registra gastos o pide análisis sin abrir la app.", color: "#25D366", bg: "#ECFDF5" },
     { icon: "🎯", title: "Presupuestos", desc: "Define cuánto quieres gastar por categoría. balu te avisa cuando estás al límite.", color: "#F59E0B", bg: "#FFFBEB" },
     { icon: "🔄", title: "Gastos recurrentes", desc: "Renta, Netflix, gym — configúralos una vez y balu los aplica cada mes.", color: "#8B5CF6", bg: "#F5F3FF" },
     { icon: "📈", title: "Estadísticas avanzadas", desc: "Gráficas de ingresos vs gastos, evolución de activos y comparativa año a año.", color: "#EC4899", bg: "#FDF2F8" },
@@ -387,7 +387,7 @@ function AISection() {
               <span style={{ background: "linear-gradient(135deg, #0EA5E9, #3B82F6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>tus finanzas.</span>
             </h2>
             <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.7, marginBottom: 24 }}>
-              balu usa la API de Anthropic (Claude) para importar estados de cuenta, generar insights mensuales y responder tus preguntas financieras — por la app o directamente por WhatsApp.
+              balu usa la API de Anthropic (Claude) para importar estados de cuenta, generar insights mensuales y responder tus preguntas financieras directamente por WhatsApp.
             </p>
 
             <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 24, padding: "16px 20px", background: "linear-gradient(135deg, #EFF6FF, #DBEAFE)", border: "1px solid #BFDBFE", borderRadius: 18 }}>
@@ -402,7 +402,7 @@ function AISection() {
               {[
                 { icon: "📄", title: "Importación de PDF", desc: "Sube tu estado de cuenta y Claude extrae todos los movimientos. Detecta gastos, ingresos y transferencias.", color: "#0EA5E9", bg: "#EFF6FF", tag: "Todos los planes" },
                 { icon: "💬", title: "Insight mensual", desc: "Al cierre de mes, balu genera un análisis breve y personalizado de tu situación financiera.", color: "#10B981", bg: "#ECFDF5", tag: "Todos los planes" },
-                { icon: "🤖", title: "Chat con asistente IA", desc: "Habla con balu desde la app o WhatsApp. Consulta, registra gastos o pide análisis sin abrir la app.", color: "#8B5CF6", bg: "#F5F3FF", tag: "Pro y Max" },
+                { icon: "🤖", title: "Chat con asistente por WhatsApp", desc: "Habla con balu desde WhatsApp. Consulta, registra gastos o pide análisis sin abrir la app.", color: "#8B5CF6", bg: "#F5F3FF", tag: "Pro y Max" },
               ].map((item, i) => (
                 <div key={i} style={{ display: "flex", gap: 12, padding: "14px 16px", background: item.bg, border: `1px solid ${item.color}20`, borderRadius: 14 }}>
                   <span style={{ fontSize: 20, flexShrink: 0 }}>{item.icon}</span>
@@ -583,11 +583,11 @@ function Pricing() {
   ];
   const proFeatures = [
     "Todo lo de Lite",
-    "Chat con asistente IA (app)",
     "Chat con asistente IA por WhatsApp",
     "Insight mensual personalizado",
     "Estadísticas año a año",
     "Soporte prioritario",
+    "Acceso a nuevas funciones",
   ];
   const maxFeatures = [
     "Todo lo de Pro",
@@ -606,8 +606,7 @@ function Pricing() {
     { feature: "Exportar a Excel", lite: true, pro: true, max: true },
     { feature: "Estadísticas básicas", lite: true, pro: true, max: true },
     { feature: "Insight mensual con IA", lite: false, pro: true, max: true },
-    { feature: "Chat con asistente (app)", lite: false, pro: true, max: true },
-    { feature: "Chat con asistente (WhatsApp)", lite: false, pro: true, max: true },
+    { feature: "Chat con asistente por WhatsApp", lite: false, pro: true, max: true },
     { feature: "Estadísticas año a año", lite: false, pro: true, max: true },
     { feature: "Soporte prioritario", lite: false, pro: true, max: true },
     { feature: "Entidades financieras", lite: "1", pro: "1", max: "5" },
@@ -621,7 +620,7 @@ function Pricing() {
         <div ref={titleRef} className="fade-up" style={{ textAlign: "center", marginBottom: 44 }}>
           <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "2px", color: "#10B981", textTransform: "uppercase", marginBottom: 10 }}>Precios</p>
           <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 800, letterSpacing: "-1.5px", color: "#0F172A", lineHeight: 1.1, marginBottom: 10 }}>Elige tu plan.</h2>
-          <p style={{ fontSize: 15, color: "#64748B" }}>7 días gratis · Cancela cuando quieras · Sin compromisos</p>
+          <p style={{ fontSize: 15, color: "#64748B" }}>Descarga gratis · Cancela cuando quieras · Sin compromisos</p>
         </div>
 
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
@@ -737,9 +736,8 @@ function PlanCard({ name, price, period, annual, description, features, featured
 // ── FAQ ───────────────────────────────────────────────────────────────────
 function FAQ() {
   const faqs = [
-    { q: "¿Cómo funciona el período de prueba?", a: "Todos los planes incluyen 7 días gratis. Durante ese tiempo puedes usar todas las funciones del plan sin cargo. Si no cancelas antes de que termine, se cobra automáticamente el primer período." },
     { q: "¿Es seguro subir mi estado de cuenta?", a: "Sí. Tu PDF se envía directamente a la API de Anthropic (Claude) solo para extraer los movimientos. balu no lo almacena después del procesamiento. Toda la comunicación es cifrada con HTTPS." },
-    { q: "¿Cómo funciona el chat con IA por WhatsApp?", a: "Si tienes plan Pro o Max, puedes vincular tu número y hablar con balu directamente por WhatsApp. Puedes preguntar por tus gastos, pedir análisis o registrar movimientos desde el chat. Todo con el mismo contexto que dentro de la app." },
+    { q: "¿Cómo funciona el chat con IA por WhatsApp?", a: "Si tienes plan Pro o Max, puedes vincular tu número y hablar con balu directamente por WhatsApp. Puedes preguntar por tus gastos, pedir análisis o registrar movimientos desde el chat. El chat con IA vive exclusivamente en WhatsApp — dentro de la app no hay chatbot, solo el dashboard y tus movimientos." },
     { q: "¿Necesito conectar mis cuentas bancarias?", a: "No. balu funciona con registro manual y con importación de PDFs. No pedimos acceso a tus cuentas bancarias ni contraseñas. Tú tienes el control total." },
     { q: "¿Puedo usar balu para mi negocio?", a: "Sí. Con balu Max puedes crear hasta 5 entidades financieras separadas, ideal para separar finanzas personales de negocio o manejar varios proyectos al mismo tiempo." },
     { q: "¿Qué pasa si cancelo mi suscripción?", a: "Mantienes acceso hasta el fin del período pagado. Después tus datos permanecen disponibles por 30 días antes de ser eliminados. Puedes exportar todo a Excel en cualquier momento." },
@@ -790,7 +788,7 @@ function CTAFinal() {
         </h2>
         <p style={{ fontSize: 17, color: "#64748B", maxWidth: 380, margin: "0 auto 32px", lineHeight: 1.6 }}>Con balu, la respuesta siempre es sí.</p>
         <a href="#precios" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "linear-gradient(135deg, #10B981, #059669)", color: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 16, padding: "15px 34px", borderRadius: 15, textDecoration: "none", boxShadow: "0 12px 36px rgba(16,185,129,0.35)" }}>
-          📱 Empezar gratis por 7 días
+          📱 Descargar balu gratis
         </a>
         <p style={{ fontSize: 12, color: "#94A3B8", marginTop: 12 }}>App Store y Google Play · Disponible para México</p>
       </div>
@@ -818,7 +816,7 @@ function Footer() {
             <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 700, color: "#CBD5E1", letterSpacing: "1px", marginBottom: 12 }}>PRODUCTO</p>
             <FooterLink href="#como-funciona">Cómo funciona</FooterLink>
             <FooterLink href="#caracteristicas">Características</FooterLink>
-            <FooterLink href="#ia">IA y WhatsApp</FooterLink>
+            <FooterLink href="#ia">IA por WhatsApp</FooterLink>
             <FooterLink href="#precios">Precios</FooterLink>
           </div>
           <div>
